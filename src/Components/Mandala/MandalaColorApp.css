@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
+  
+  .appContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  }
+  
+  .panel {
+    display: flex;
+    flex-direction: column;
+    width: 25vw;
+    height: 100vh;
+    margin-top: 20vh;
+  }
+  
+  .colorButtons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+  
+  .color-swatch {
+    height: 7vh;
+    width: 5vw;
+    border-radius: 7px;
+    margin: 9px;
+    cursor: pointer;
+    border: 4px solid black;
+  }
+  
+  .color-swatch-active {
+    box-shadow: inset 0 0 15px #000000;
+    transition: all 0.2s;
+  }
+
+  .controlButton {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 22px;
+    height: 9vh;
+    width: 8vw;
+    border-radius: 7px;
+    margin: 9px;
+    cursor: pointer;
+    border: 4px solid black;
+    padding-top: 5px;
+    padding-bottom: 10px;
+  }
+
+  .mandalaContainer {
+    display: flex;
+    width: 75vw;
+    height: 100vh;
+    margin-top: 15px;
+  }
+  
+  .mandala {
+    width: 70vw;
+    height: 100vh;
+  }
