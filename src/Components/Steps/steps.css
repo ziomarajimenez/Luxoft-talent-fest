@@ -1,0 +1,82 @@
+.steps{
+    display: flex;
+    justify-content: center;
+}.step-1 {
+  width: 200px;
+  height: 40px;
+  position: relative;
+  background: #63666a;
+  text-align: center;
+}
+.step-1:before {
+  content: "";
+  position: absolute;
+  right: -20px;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-left: 20px solid #63666a;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+}
+.step-2{
+    width: 200px;
+    height: 40px;
+    position: relative;
+    background: #EDEDED;
+    text-align: center;
+
+  }
+  .step-2:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-left: 20px solid #EDEDED;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+  }
+  .step-2:before {
+    content: "";
+    position: absolute;
+    right: -20px;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-left: 20px solid #EDEDED;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+  }
+  .step-3 {
+    width: 200px;
+    height: 40px;
+    position: relative;
+    background: #EDEDED;
+    text-align: center;
+
+  }
+  .step-:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-left: 20px solid #EDEDED;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+  }
+  .step-3:before {
+    content: "";
+    position: absolute;
+    right: -20px;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-left: 20px solid #EDEDED;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+  }
+  
