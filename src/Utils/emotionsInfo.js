@@ -1,0 +1,4 @@
+export const emotionsInfo = {
+    angry: 'El enojo es una emoción caracterizada por el antagonismo hacia alguien o algo que sientes que te ha hecho daño deliberadamente. El enojo puede ser algo bueno. Puede brindarte una forma de expresar sentimientos negativos, por ejemplo, o motivarte a encontrar soluciones a los problemas. Pero el enojo excesivo puede causar problemas. El aumento de la presión arterial y otros cambios físicos asociados con el enojo hacen que sea difícil pensar con claridad y dañan su salud física y mental.',
+    concerned: 'Fuerte aversión, por ejemplo, al sabor, olor o tacto de algo considerado repugnante, o hacia una persona o comportamiento considerado moralmente repugnante.'
+}
