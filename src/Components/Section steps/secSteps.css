@@ -1,4 +1,4 @@
-.steps {
+/* .steps {
     display: flex;
     justify-content: center;
   }
@@ -80,4 +80,56 @@
     border-top: 20px solid transparent;
     border-bottom: 20px solid transparent;
   }
-  
+   */
+.step-1:after {
+  color: burlywood;
+  border-left: 13px solid;
+  border-top: 13px solid transparent;
+  border-bottom: 13px solid transparent;
+  display: inline-block;
+  content: "";
+  position: absolute;
+  right: -13px;
+}
+.step-1 {
+  background-color: burlywood;
+  width: 150px;
+  height: 30px;
+  display: inline-block;
+  position: relative;
+}
+/*! After es la punta */
+.step-2:after {
+  color: aqua;
+  border-left: 13px solid;
+  border-top: 13px solid transparent;
+  border-bottom: 13px solid transparent;
+  display: inline-block;
+  content: "";
+  position: absolute;
+  right: -13px;
+}
+.step-2 {
+  background-color: aqua;
+  width: 150px;
+  height: 30px;
+  display: inline-block;
+  position: relative;
+}
+/* .step-3:after {
+  color: purple;
+  border-left: 13px solid;
+  border-top: 13px solid transparent;
+  border-bottom: 13px solid transparent;
+  display: inline-block;
+  content: "";
+  position: absolute;
+  right: -13px;
+} */
+.step-3 {
+  background-color: purple;
+  width: 150px;
+  height: 30px;
+  display: inline-block;
+
+}

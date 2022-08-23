@@ -1,7 +1,7 @@
 import React from "react";
 import './secSteps.css'
 
-const SecSteps = () => {
+export const SecSteps = () => {
   return (
     <div className="steps">
       <div className="step-1">Paso 1</div>
@@ -11,4 +11,3 @@ const SecSteps = () => {
   );
 };
 
-export default SecSteps;
