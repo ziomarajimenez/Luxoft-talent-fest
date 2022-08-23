@@ -23,7 +23,9 @@ function MandalaColorApp() {
                 <MandalaThree fillColors={fillColors} onFill={onFillColor} />
             </div>
             <div className="panel">
-                <ColorPanel currentColor={currentColor} changeColor={setCurrentColor} />
+                <ColorPanel currentColor={currentColor} changeColor={setCurrentColor} 
+                 setFillColors  = {setFillColors}
+                 />
             </div>
         </div>
     )
