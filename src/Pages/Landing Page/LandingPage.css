@@ -16,7 +16,7 @@
 }
 
 .landing-page p {
-    font-size: 22px;
+    font-size: 27px;
 }
 
 .landing-page button {
@@ -28,16 +28,21 @@
     border: none;
     border-radius: 10px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 18px;
+    margin-top: 2%;
+}
+
+#origin{
+    font-size: 20px;
 }
 
 .landing-page input {
-    font-size: 16px;
+    font-size: 20px;
     /* border-radius: 5px; */
 }
 
 .landing-page select {
-    font-size: 16px;
+    font-size: 20px;
 
 }
 
