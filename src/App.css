@@ -12,6 +12,7 @@
 
 .mainButtonContainer {
   margin: auto;
+  background-color: #EDEDED;
 }
 
 .mainButton {
@@ -23,4 +24,10 @@
   height: 6vh;
   width: 9vw;
   margin: 4vh auto 4vh auto;
+  cursor: pointer;
+}
+
+.mainButton:disabled {
+  background-color: #BB8EEB;
+  cursor: auto;
 }
