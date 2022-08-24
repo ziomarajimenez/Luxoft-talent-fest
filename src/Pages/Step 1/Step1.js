@@ -1,7 +1,8 @@
 import "./Step1.css";
 import Frighten from "../../Assets/Frighten.svg";
 import Timer from "../../Components/Timer/Timer";
-function Step1() {
+
+const Step1 = () =>  {
   return (
     <>
       <section className="informationHeader">
@@ -12,4 +13,5 @@ function Step1() {
     </>
   );
 }
+
 export default Step1;

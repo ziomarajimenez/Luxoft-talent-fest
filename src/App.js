@@ -4,12 +4,14 @@ import { LandingPage } from './Pages/Landing Page/LandingPage'
 import { Emotions } from './Pages/Emotions/Emotions'
 import { Description } from './Pages/Description/Description'
 // Imports for "not" case
-import { Step1 } from './Pages/Step 1/Step1'
+import Step1 from './Pages/Step 1/Step1'
 import { Step2Mandala } from './Pages/Not - Step 2/Step2-Mandala'
 import Step3 from "./Pages/Step 3/Step3";
 // Imports for "yes" case
 import { Step1Words } from './Pages/Work - Yes - Step1/Step1 - Words';
 import { Step3SelfQuestions } from './Pages/Yes - Step 3/Step 3 - SelfQuestions'
+
+
 function App() {
   return (
     <div className="App">

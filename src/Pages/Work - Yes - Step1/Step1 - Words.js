@@ -24,7 +24,7 @@ export const Step1Words = () => {
 
     return (
         <>
-        <Header />
+        {/* <Header /> */}
         <section className='informationHeader'>
             <div className="infoImagesCorner">
                 <img className="infoFeelingBig" src={Frighten} alt="Frighten" />

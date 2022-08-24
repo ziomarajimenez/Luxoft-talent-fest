@@ -13,6 +13,7 @@
 .mainButtonContainer {
   margin: auto;
   background-color: #EDEDED;
+  padding-bottom: 0.3em;
 }
 
 .mainButton {
@@ -25,6 +26,7 @@
   width: 9vw;
   margin: 4vh auto 4vh auto;
   cursor: pointer;
+  display: block;
 }
 
 .mainButton:disabled {
