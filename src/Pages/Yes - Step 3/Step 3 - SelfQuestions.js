@@ -37,6 +37,9 @@ export const Step3SelfQuestions = () => {
                 <p className="stepQuestion">¿Qué es lo peor que podría pasar?</p>
                 <p className="stepQuestion">¿Qué haría en ese escenario?</p>
             </div>
+            <div>
+                <p>-----Modal-----</p>
+            </div>
             <div className="mainButtonContainer">
                 <button className="mainButton">Finalizar</button>
             </div>

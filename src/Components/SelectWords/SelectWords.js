@@ -1,35 +1,53 @@
-import { emotionsInfo } from '../../Utils/emotionsInfo'
-import './SelectWords.css'
-import { useState } from 'react';
 
-export const SelectWords = () => {
+import React, {useState, useEffect} from "react"
+import { emotionsInfo } from "../../Utils/emotionsInfo"
+import '../SelectWords/SelectWords.css' 
 
-    const handleOnClick = (event) => {
-        console.log(event.target.dataset.index)
+function SelectWords() {
+
+    let { words } = emotionsInfo
+    const [options, setOptions] = useState(words.miedo)
+    const [selections, setSelections] = useState([])
+
+    
+    useEffect(() => {
+        console.log("options", options)
+        console.log("selections", selections)
+
+    }, []);
+
+    const handleClick = (option) => {
+        console.log("option selected => ", option)
+        setSelections(current => [...current, option])
+
+
     }
 
-
-    const [wordsLeft, setWordsLeft] = useState([emotionsInfo.words.miedo]);
-    const [wordsRight, setWordsRight] = useState(new Array(emotionsInfo.words.miedo.length));
-
-    console.log(wordsLeft)
-
-
-    const listOfWords = wordsLeft?.map((word, index) =>
-        <p data-index={index} data-side='left' onClick={handleOnClick}>{word}</p>
-    );
-
-    const selectedListOfWords = wordsRight?.map((word, index) =>
-        <p data-index={index} dataside='right' onClick={handleOnClick}>{word}</p>
-    );
-
-
     return (
-        <div className='select-words'>
-            <ul>{listOfWords}</ul>
-            <ul> {selectedListOfWords} </ul>
+        <>
+        <div className="columnContainer">
+            <div className="columnInfo optionsColumn">
+                {options.map( (option) =>  (
+                    <div id={option} className="option" onClick={()=> handleClick(option)}> 
+                    <p>{option}</p>
+                     </div>
+                ) )}
+                
+            </div>
+            <div className="columnInfo selectionColumn">
+            { selections.length ? selections.map( (selection) =>  (
+                    <div id={selection} className="selection" 
+                    // onClick={()=> handleClick(selection)}
+                    > 
+                    <p>{selection}</p>
+                     </div>
+                ) )
+             : ''
+            }
+            </div>
         </div>
-    );
+        </>
+    )
 }
-// selectedListOfWords[index] = word[index];
-// word[index] = '';
+
+export default SelectWords;

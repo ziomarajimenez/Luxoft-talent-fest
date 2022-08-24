@@ -1,3 +1,13 @@
+.columnContainer {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.columnInfo{
+    display: 50%;
+}
+
 .select-words{
     border: 1px solid black;
 }
+
