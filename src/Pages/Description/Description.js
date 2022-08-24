@@ -3,9 +3,13 @@ import { useState, useEffect } from 'react';
 import { Header } from '../../Components/Header/Header'
 import './Description.css'
 import { emotionsInfo } from '../../Utils/emotionsInfo';
+import { useNavigate } from "react-router-dom";
 
 export const Description = () => {
     const [items, setItems] = useState([]);
+    const [userEmotion, setUserEmotion] = useState('');
+
+    const navigate = useNavigate();
 
     useEffect(() => {
         const items = JSON.parse(localStorage.getItem('values'));
@@ -14,9 +18,22 @@ export const Description = () => {
         }
     }, []);
 
+    useEffect(() => {
+        const usersEmotion = JSON.parse(localStorage.getItem('emotion'));
+        if (usersEmotion) {
+            setUserEmotion(usersEmotion);
+        }
+    }, []);
+
     const [question, setQuestion] = useState({
         question: '',
     });
+
+    useEffect(() => {
+        localStorage.setItem('question', JSON.stringify(question));
+    }, [question]);
+
+    console.log(question)
 
     const handleChange = (evt) => {
         evt.preventDefault();
@@ -25,29 +42,35 @@ export const Description = () => {
         setQuestion(value);
     }
 
-
     const { name, origin } = items;
 
+    const handleOnNavigate = () => {
+        if (question !== '') {
+            navigate('/step1')
+        }
+    }
+
+    console.log(question)
     return (
         <div className='description'>
             <Header />
             <section id='description-content'>
                 <div>
                     <h1 className='title'> <b>{name} </b>
-                        se siente con miedo <img src={emotionsInfo.img.miedo} id='emotion-pic' alt='icon-origin'></img> y el origen de la emoción es {origin}
-                        <img src={emotionsInfo.img.personal} id='icon-origin' alt='icon-origin'></img>
+                        {emotionsInfo.title[userEmotion]} <img src={emotionsInfo.img[userEmotion]} id='emotion-pic' alt='icon-origin'></img> y el origen de la emoción es {origin}
+                        <img src={emotionsInfo.img[origin]} id='icon-origin' alt='icon-origin'></img>
                     </h1>
                 </div>
                 <p> <b>Descripción de la emoción</b> </p>
-                <p>{emotionsInfo.description.miedo}</p>
-                <p> <b>{emotionsInfo.question.miedo}</b> </p>
+                <p>{emotionsInfo.description[userEmotion]}</p>
+                <p> <b>{emotionsInfo.question[userEmotion]}</b> </p>
                 <div name="origin" onChange={handleChange} id='description-origin'>
                     <input type="radio" value="si" name="origin" /> Sí
                     <br></br>
                     <input type="radio" value="no" name="origin" /> No
                 </div>
                 <br></br>
-                <button id='description-continue'>Continuar</button>
+                <button id='description-continue' onClick={handleOnNavigate}>Continuar</button>
             </section>
         </div>
     );
