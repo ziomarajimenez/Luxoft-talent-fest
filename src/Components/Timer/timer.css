@@ -1,0 +1,15 @@
+.timer-circle {
+  height: 250px;
+  width: 250px;
+  background-color: #d9d9d9;
+  border-radius: 50%;
+  border: 2px solid #63666a;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+.time-impress{
+    font-size: 50px;
+  
+    margin-top: 80px;
+}
