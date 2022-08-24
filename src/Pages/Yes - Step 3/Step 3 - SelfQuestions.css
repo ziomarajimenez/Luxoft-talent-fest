@@ -1,0 +1,66 @@
+.informationHeader {
+    background-color: #EDEDED;
+    display: flex;
+    flex-direction: row;
+    height: 140px;
+    width: 100%;
+}
+
+.infoImagesCorner {
+    display: flex;
+    flex-direction: row;
+    margin-top: 1vh;
+    margin-left: 1vw;
+}
+
+.infoFeeling {
+    max-width: 6vw;
+    max-height: 5vh;
+    margin-top: 3vh;
+    margin-left: 1vw;
+}
+
+.infoCase {
+    max-width: 11vw;
+    max-height: 11vh;
+    margin-top: 0;
+    margin-left: 1vw;
+}
+
+.infoName {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: auto;
+}
+
+h1 {
+    color: #6024A0;
+    font-size: 50px;
+}
+
+.fakeSpace {
+    width: 12vw;
+}
+
+.stepContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #EDEDED;
+}
+
+.infoBanner {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #C9A2FF;
+    max-height: 200px;
+    width: 65vw;
+    margin: auto;
+}
+
+.infoParagraph {
+    justify-self: center;
+    text-align: center;
+}
