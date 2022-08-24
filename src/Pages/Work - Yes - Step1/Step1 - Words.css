@@ -1,14 +1,33 @@
-.mainButtonContainer {
+.selectorContainer {
+    background-color: #EDEDED;
+}
+
+.infoFeelingBig {
+    max-width: 11vw;
+    max-height: 10vh;
+    margin-top: 1vh;
+    margin-left: 1vw;
+}
+
+.infoCaseSmall {
+    max-width: 6vw;
+    max-height: 6vh;
+    margin-top: 1vh;
+    margin-left: 1vw;
+}
+
+.infoName {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     margin: auto;
-  }
-  
-.mainButton {
-    color: white;
-    font-size: 2vh;
-    background-color: #6024A0;
-    border: none;
-    border-radius: 7px;
-    height: 6vh;
-    width: 9vw;
-    margin: 4vh auto 4vh auto;
-  }
+}
+
+h1 {
+    color: #6024A0;
+    font-size: 50px;
+}
+
+.fakeSpace {
+    width: 12vw;
+}

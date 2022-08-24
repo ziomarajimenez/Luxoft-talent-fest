@@ -1,13 +1,44 @@
 .columnContainer {
-    width: 100%;
+    background-color: #EDEDED;
+    width: 60%;
     display: flex;
     justify-content: space-around;
+    margin: auto;
 }
+
+.columnSpace {
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    height: 70vh;
+    width: 16vw;
+    margin-top: 2vh;
+}
+
 .columnInfo{
     display: 50%;
+    margin: auto;
 }
 
-.select-words{
-    border: 1px solid black;
+.option {
+    border: 3px solid #6024A0;
+    border-radius: 7px;
+    height: 6vh;
+    width: 9vw;
+    cursor: pointer;
 }
 
+.selection {
+    border: 3px solid #6024A0;
+    border-radius: 7px;
+    height: 6vh;
+    width: 9vw;
+    cursor: pointer;
+}
+
+.word {
+    color: #6024A0;
+    text-align: center;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+}
