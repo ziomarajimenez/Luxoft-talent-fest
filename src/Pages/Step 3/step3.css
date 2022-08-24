@@ -6,9 +6,37 @@
 }
 #audio-instructions {
   background-color: #c9a2ff;
-  margin: 3%;
-  padding: 10px;
+  margin: 2% auto 1% auto;
+  padding: 0 10px;
   text-align: center;
-  max-width: 50%;
+  max-width: 60%;
+  width: 50%;
   font-weight: 700;
+}
+.audio {
+  margin: 3% auto 1% auto;
+  width: 500px;
+  max-width: 35%;
+}
+#random-phrases {
+  font-size: 25px;
+  font-weight: bold;
+  margin: 2% auto 1% auto;
+}
+.section-talk {
+  margin: 3% auto 1% auto;
+}
+.btn-talk-to-someone {
+  border: none;
+  background-color: transparent;
+  color: #003a79;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  font-size: 20px;
+}
+#info {
+  width: 35px;
+  height: 35px;
 }
