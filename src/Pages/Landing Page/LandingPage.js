@@ -1,6 +1,6 @@
 import { Header } from '../../Components/Header/Header'
 import './LandingPage.css'
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import heart from '../../Assets/Heart.png'
 import briefcase from '../../Assets/Briefcase.png'
 import { useNavigate } from "react-router-dom";
@@ -14,6 +14,11 @@ export const LandingPage = () => {
         age: '',
         origin: ''
     });
+
+    useEffect(() => {
+        localStorage.setItem('values', JSON.stringify(values));
+    }, [values]);
+
 
     const handleChange = (evt) => {
         evt.preventDefault();
@@ -77,7 +82,7 @@ export const LandingPage = () => {
                 <span class="validity"></span>
             </div>
             <p>¿Cuál es el origen de tu emoción?</p>
-            <div name="origin" onChange={handleChange}>
+            <div name="origin" onChange={handleChange} id='origin'>
                 <input type="radio" value="personal" name="origin" /> Personal
                 <img src={heart} alt='heart-icon' className='heart'></img>
                 <br></br>

@@ -1,0 +1,14 @@
+.section-audio {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-content: center;
+}
+#audio-instructions {
+  background-color: #c9a2ff;
+  margin: 3%;
+  padding: 10px;
+  text-align: center;
+  max-width: 50%;
+  font-weight: 700;
+}
