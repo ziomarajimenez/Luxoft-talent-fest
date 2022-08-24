@@ -1,0 +1,86 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap'); */
+  
+  .appContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+  
+  .panel {
+    display: flex;
+    flex-direction: column;
+    width: 24vw;
+    height: 60vh;
+    margin-top: 7vh;
+    margin-right: 5vw; 
+  }
+  
+  .colorButtons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 1vh;
+    margin-bottom: 1rem;
+  }
+  
+  .color-swatch {
+    height: 4vh;
+    width: 2vw;
+    border-radius: 7px;
+    margin: 0.4rem;
+    cursor: pointer;
+    border: 2px solid black;
+  }
+  
+  .color-swatch-active {
+    box-shadow: inset 0 0 15px #000000;
+    transition: all 0.2s;
+  }
+
+  .navColor {
+    display: flex;
+    justify-content: center;
+    margin-top: 0;
+  }
+
+  .colorSelector {
+    height: 4vh;
+    width: 5vw;
+    border-radius: 7px;
+    margin-top: 0;
+    margin-bottom: 1.5vh;
+    cursor: pointer;
+    border: 2px solid black;
+  }
+
+  .controlButtons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .controlButton {
+    font-size: 1rem;
+    color: #6024A0;
+    height: 6vh;
+    width: 8vw;
+    border-radius: 7px;
+    cursor: pointer;
+    border: 3px solid #6024A0;
+    margin: 0.5vh auto;
+    padding-top: 0.4rem;
+    padding-bottom: 0.7rem;
+  }
+
+  .mandalaContainer {
+    display: flex;
+    width: 40vw;
+    height: 70vh;
+    /* margin-top: 15px;
+    margin-left: 19vw; */
+  }
+  
+  .mandala {
+    width: 60vw;
+    height: 70vh;
+  }
