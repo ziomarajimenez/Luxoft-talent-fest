@@ -10,31 +10,29 @@ import frightenmusic4 from "../../Assets/Frighten music/winning-elevation-111355
 import info from "../../Assets/Info.png";
 import { emotionsInfo } from "../../Utils/emotionsInfo";
 
+const musicFrighten = [
+  frightenmusic,
+  frightenmusic2,
+  frightenmusic3,
+  frightenmusic4,
+];
+const randomMusic =
+  musicFrighten[Math.floor(Math.random() * musicFrighten.length)];
+
+const { messages } = emotionsInfo;
+
+const randomPhrases =
+  messages.miedo[Math.floor(Math.random() * messages.miedo.length)];
+console.log(messages);
+
 const Step3 = () => {
-  // const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState(false);
-
-  let musicFrighten = [
-    frightenmusic,
-    frightenmusic2,
-    frightenmusic3,
-    frightenmusic4,
-  ];
-  let randomMusic =
-    musicFrighten[Math.floor(Math.random() * musicFrighten.length)];
-
-  let { messages } = emotionsInfo;
-
-  let randomPhrases =
-    messages.miedo[Math.floor(Math.random() * messages.miedo.length)];
-  console.log(messages);
 
   return (
     <div className="section-audio">
-      
       {/* <SecSteps /> */}
       <section id="audio-instructions">
-        <p className='audio-p'>Escucha el siguiente audio</p>
+        <p className="audio-p">Escucha el siguiente audio</p>
       </section>
 
       <audio className="audio" src={randomMusic} controls></audio>
@@ -48,7 +46,7 @@ const Step3 = () => {
         </button>
       </section>
       <Modal handleClose={() => setIsOpen(false)} isOpen={isOpen}></Modal>
-      <button>Finalizar</button>
+      {/* <button className="mainButton">Finalizar</button> */}
     </div>
   );
 };
