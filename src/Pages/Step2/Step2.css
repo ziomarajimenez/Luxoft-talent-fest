@@ -1,39 +1,39 @@
-#step1{
+#step2{
     background-color: #EDEDED;;
 }
-#step1-container{
+#step2-container{
     margin: 0 18% 0 18%;
 }
 
-#title-step1{
+#title-step2{
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-#title-step1 img{
+#title-step2 img{
     width: 8%;
     height: 5%;
 }
 
-#step1-origin img{
+#step2-origin img{
     width: 3%;
     height: 2%;
 }
 
-#title-step1 h1{
+#title-step2 h1{
     font-size: 40px;
     color: #6024A0;
     font-weight: bolder;
 }
 
-#info-step1 p{
+#info-step2 p{
     background-color: #C9A2FF;
     font-size: 25px;
     text-align: center;
 }
 
-#info-step1{
+#info-step2{
 display: flex;
 flex-direction: column;
 justify-content: center;
