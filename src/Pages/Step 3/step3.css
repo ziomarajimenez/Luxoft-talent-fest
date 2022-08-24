@@ -13,6 +13,9 @@
   width: 37%;
   font-weight: 300;
 }
+.audio-p {
+  font-size: 30px;
+}
 .audio {
   margin: 3% auto 1% auto;
   width: 500px;

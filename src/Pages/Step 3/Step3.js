@@ -31,9 +31,10 @@ const Step3 = () => {
 
   return (
     <div className="section-audio">
-      <SecSteps />
+      
+      {/* <SecSteps /> */}
       <section id="audio-instructions">
-        <p>Escucha el siguiente audio</p>
+        <p className='audio-p'>Escucha el siguiente audio</p>
       </section>
 
       <audio className="audio" src={randomMusic} controls></audio>
