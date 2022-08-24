@@ -1,135 +1,59 @@
-/* .steps {
-    display: flex;
-    justify-content: center;
-  }
-  .step-1 {
-    width: 200px;
-    height: 40px;
-    position: relative;
-    background: #63666a;
-    text-align: center;
-    border: 1px solid #63666a;
-  }
-  .step-1:before {
-    content: "";
-    position: absolute;
-    right: -20px;
-    bottom: 0;
-    width: 0;
-    height: 0;
-    border-left: 20px solid #63666a;
-    border-top: 20px solid transparent;
-    border-bottom: 20px solid transparent;
-  }
-  .step-2 {
-    width: 200px;
-    height: 40px;
-    position: relative;
-    border: 1px solid #63666a;
+.steps {
+  display: flex;
+  justify-content: center;
+}
+/* border: 1px solid #63666a;
     background: #ededed;
-    text-align: center;
-  }
-  .step-2:after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 0;
-    height: 0;
-    border-left: 20px solid  #ededed;
-    border-top: 20px solid transparent;
-    border-bottom: 20px solid transparent;
-  }
-  .step-2:before {
-    content: "";
-    position: absolute;
-    right: -20px;
-    bottom: 0;
-    width: 0;
-    height: 0;
-    border-left: 20px solid #63666a;
-    border-top: 20px solid transparent;
-    border-bottom: 20px solid transparent;
-  }
-  .step-3 {
-    width: 200px;
-    height: 40px;
-    border: 1px solid #63666a;
-    background: #ededed;
-    text-align: center;
-  }
-  .step-3:after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 0;
-    height: 0;
-    border-left: 20px solid #ededed;
-    border-top: 20px solid transparent;
-    border-bottom: 20px solid transparent;
-  }
-  .step-3:before {
-    content: "";
-    position: absolute;
-    right: -20px;
-    bottom: 0;
-    width: 0;
-    height: 0;
-    border-left: 20px solid #ededed;
-    border-top: 20px solid transparent;
-    border-bottom: 20px solid transparent;
-  }
-   */
+    text-align: center;*/
+ /*! After es la punta */   
 .step-1:after {
-  color: burlywood;
-  border-left: 13px solid;
-  border-top: 13px solid transparent;
-  border-bottom: 13px solid transparent;
+  color: #63666a;
+  border-left: 23px solid;
+  border-top: 21px solid transparent;
+  border-bottom: 28px solid transparent;
   display: inline-block;
   content: "";
   position: absolute;
-  right: -13px;
+  right: -23px;
+
 }
 .step-1 {
-  background-color: burlywood;
-  width: 150px;
-  height: 30px;
+  background-color: #63666a;
+  width: 250px;
+  height: 49px;
   display: inline-block;
   position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: .2%;
+  /* border: 1px solid #63666a; */
 }
-/*! After es la punta */
 .step-2:after {
   color: aqua;
-  border-left: 13px solid;
-  border-top: 13px solid transparent;
-  border-bottom: 13px solid transparent;
+  border-color: #63666a;
+  border-left: 23px solid #000;
+  border-top: 21px solid transparent;
+  border-bottom: 28px solid transparent;
   display: inline-block;
   content: "";
   position: absolute;
-  right: -13px;
+  right: -23px;
+ 
+
 }
 .step-2 {
-  background-color: aqua;
-  width: 150px;
-  height: 30px;
+  background-color: #ededed;
+  border-color: #63666a;
+  width: 250px;
+  height: 49px;
   display: inline-block;
   position: relative;
+  text-align: center;
 }
-/* .step-3:after {
-  color: purple;
-  border-left: 13px solid;
-  border-top: 13px solid transparent;
-  border-bottom: 13px solid transparent;
-  display: inline-block;
-  content: "";
-  position: absolute;
-  right: -13px;
-} */
 .step-3 {
-  background-color: purple;
-  width: 150px;
-  height: 30px;
+  background-color: #ededed;
+  width: 250px;
+  height: 49px;
   display: inline-block;
-
+  text-align: center;
 }
