@@ -1,23 +1,19 @@
-import './Step1.css';
-import Frighten from '../../Assets/Frighten.svg'
+import "./Step1.css";
+import Frighten from "../../Assets/Frighten.svg";
+import CountdownTimer from "../../Components/Timer/CountdownTimer";
+
 function Step1() {
-    return (
-        <><section className='informationHeader'>
-            <img src={Frighten} alt="Frighten" />
-            <h1>Nombre</h1>
-        </section>
-            <section className='instructionsBreathing'>
-                <div className='textBreath'><p>Realiza respiraciones profundas por 10 segundos</p></div>
-            </section>
-            <section className='Countdown'>
-                <section className='CountdownCircle'>
-                    <p>00:00</p>
-                </section>
-            </section>
-            <section className='startButtonSection'>
-                <button className='startButton'>Iniciar</button>
-            </section>
-        </>
-    );
+  const THREE_DAYS_IN_MS = 3 * 24 * 60 * 60 * 1000;
+  const NOW_IN_MS = new Date().getTime();
+
+  const dateTimeAfterThreeDays = NOW_IN_MS + THREE_DAYS_IN_MS;
+
+  return (
+    <div>
+      <h1>Countdown Timer</h1>
+      <CountdownTimer targetDate={dateTimeAfterThreeDays} />
+    </div>
+  );
 }
+
 export default Step1;

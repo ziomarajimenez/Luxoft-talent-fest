@@ -1,0 +1,25 @@
+#section-end {
+    display: flex;
+    justify-content: center;
+  flex-direction: column;
+  align-content: center;
+}
+#title-end {
+  color: #6024a0;
+  font-size: 45px;
+  font-weight: bold;
+  margin: 2% auto 1% auto;
+}
+#main-end {
+    color: black;
+    font-size: 30px;
+    font-weight: bold;
+    width: 50%;
+    margin: 2% auto 1% auto;
+    text-align: center;
+}
+#tulip{
+    width: 150px;
+    height: 150px;
+    margin: 2% auto 1% auto;
+}
