@@ -1,0 +1,14 @@
+.mainButtonContainer {
+    margin: auto;
+  }
+  
+.mainButton {
+    color: white;
+    font-size: 2vh;
+    background-color: #6024A0;
+    border: none;
+    border-radius: 7px;
+    height: 6vh;
+    width: 9vw;
+    margin: 4vh auto 4vh auto;
+  }

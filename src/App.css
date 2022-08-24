@@ -22,6 +22,5 @@
   border-radius: 7px;
   height: 6vh;
   width: 9vw;
-  margin-top: 4vh;
-  margin-bottom: 4vh;
+  margin: 4vh auto 4vh auto;
 }
