@@ -12,7 +12,7 @@ function Step1() {
   return (
     <div>
       <h1>Countdown Timer</h1>
-      <CountdownTimer targetDate={dateTimeAfterThreeDays} />
+      {/* <CountdownTimer targetDate={dateTimeAfterThreeDays} /> */}
       <Timer/>
     </div>
   );

@@ -17,7 +17,7 @@ function Modal({ isOpen, handleClose }) {
       >
         <div className="modal" ref={nodeRef}>
           <div className="modal-content">
-            <button onClick={handleClose}>Cerrar</button>
+            <button id='' onClick={handleClose}>Cerrar</button>
 
             <p className="title-modal">Opciones del programa de asistencia</p>
             <p className="modal-p">
