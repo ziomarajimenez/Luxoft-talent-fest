@@ -9,7 +9,6 @@ import frightenmusic3 from "../../Assets/Frighten music/motivational-day-112790.
 import frightenmusic4 from "../../Assets/Frighten music/winning-elevation-111355.mp3";
 import info from "../../Assets/Info.png";
 import { emotionsInfo } from "../../Utils/emotionsInfo";
-import { convertLength } from "@mui/material/styles/cssUtils";
 
 const Step3 = () => {
   // const navigate = useNavigate();
