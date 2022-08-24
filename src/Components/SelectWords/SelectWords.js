@@ -1,6 +1,8 @@
+
 import React, {useState, useEffect} from "react"
 import { emotionsInfo } from "../../Utils/emotionsInfo"
 import '../SelectWords/SelectWords.css' 
+
 function SelectWords() {
 
     let { words } = emotionsInfo
