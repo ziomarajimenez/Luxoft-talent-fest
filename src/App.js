@@ -22,7 +22,7 @@ function App() {
           <Route path='/' element={<LandingPage />} />
           <Route path='/emotions' element={<Emotions />} />
           <Route path='/description' element={<Description />} />
-           <Route path='/step1' element={<Step1 />} />
+          <Route path='/step1' element={<Step1 />} />
           <Route path= '/not-step2' element={<Step2Mandala />} />
           <Route path="/step3" element={<Step3 />} />
           <Route path="/yes-step1" element={<Step1Words />} />
