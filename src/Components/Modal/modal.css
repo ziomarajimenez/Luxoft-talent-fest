@@ -36,8 +36,10 @@
   color: white;
   background-color: rgba(96, 36, 160, 1);
   margin-top: 13px;
-  margin-left: 760px;
+  /* Provisional */
+  margin-left: 20px;
   border-radius: 10px;
+
 }
 .modal-user {
   display: flex;
