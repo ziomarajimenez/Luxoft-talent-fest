@@ -70,7 +70,7 @@ export const Description = () => {
                     <input type="radio" value="no" name="origin" /> No
                 </div>
                 <br></br>
-                <button id='description-continue' onClick={handleOnNavigate}>Continuar</button>
+                <button className='mainButton' onClick={handleOnNavigate}>Continuar</button>
             </section>
         </div>
     );

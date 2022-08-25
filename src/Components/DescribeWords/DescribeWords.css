@@ -1,0 +1,19 @@
+
+#write{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#write p {
+    background-color:  #EDEDED;
+    font-weight: 600;
+    margin: 3% 0 3% 0;
+}
+
+#write textarea{
+    width: 80%;
+    height: 50%;
+    font-size: 20px;
+}

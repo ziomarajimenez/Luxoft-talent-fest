@@ -55,77 +55,87 @@ export const actions = {
         no: 'Realiza respiraciones profundas por 10 segundos',
     },
     step2: {
-        si: '',
+        si: 'Para cada palabra escribe una acción que te pueda ayudar a contrarrestar tu sentimiento',
         no: '',
     },
     step3: {
-        si: '',
-        laboral: '',
+        si: 'Para cada palabra escribe una acción que te pueda ayudar a contrarrestar tu sentimiento',
+        laboral: 'Escucha el siguiente audio:',
     }
 }
 
-// export const actions = {
-//     step1: {
-//         emotions:
-//         {
-//             enojo: {
-//                 si: 'Realiza respiraciones profundas por 10 segundos',
-//                 no: 'Realiza respiraciones profundas por 10 segundos'
-//             },
-//             disgusto: {
-//                 si: 'Piensa en la situación que motivó tu disgusto y del siguiente listado solo escoge 3 palabras para clasificarlo',
-//                 no: 'Realiza respiraciones profundas por 10 segundos'
-//             },
-//             miedo: {
-//                 si: 'Piensa en la situación que motivó tu miedo y del siguiente listado solo escoge 3 palabras para clasificarlo',
-//                 no: 'Realiza respiraciones profundas por 10 segundos'
-//             },
-//             tristeza: {
-//                 si: 'Piensa en la situación que motivó tu tristeza y del siguiente listado solo escoge 3 palabras para clasificarlo',
-//                 no: 'Realiza respiraciones profundas por 10 segundos'
-//             },
-//         }
-//     },
-//     step2: {
-//         emotions:
-//         {
-//             enojo: {
-//                 si: 'Escribe 3 puntos de cómo lo puedes controlar y reflexiona sobre cada punto, en una hoja de papel o dando clic en botón “Escribir”',
-//                 no: 'Golpea la almohada virtualmente'
-//             },
-//             disgusto: {
-//                 si: 'Para cada palabra escribe una acción que te pueda ayudar a contrarrestar ese sentimiento',
-//                 no: 'Golpea la almohada virtualmente'
-//             },
-//             miedo: {
-//                 si: 'Para cada palabra escribe una acción que te pueda ayudar a contrarrestar ese sentimiento',
-//                 no: 'Colorea el mandala'
-//             },
-//             tristeza: {
-//                 si: 'Para cada palabra escribe una acción que te pueda ayudar a contrarrestar ese sentimiento.',
-//                 no: 'Colorea el siguiente mándala'
-//             },
-//         }
-//     },
-//     step3: {
-//         emotions:
-//         {
-//             enojo: {
-//                 si: 'Toma un poco de distancia (tiempo para reflexionar) antes de hablar con la persona que te hizo sentir enojado/a y después ya con calma platica con esta persona sobre los 3 puntos que escribiste (si así lo deseas).',
-//                 no: 'Escucha el siguiente audio:'
-//             },
-//             disgusto: {
-//                 si: 'Busca a alguien y platícale acerca de la situación que te hizo sentir disgustada/o y sobre tus ideas de cómo se podría contrarrestar ese sentimiento.',
-//                 no: 'Escucha el siguiente audio:'
-//             },
-//             miedo: {
-//                 si: 'Reflexiona sobre lo escrito anteriormente y hazte las siguientes preguntas. Además, busca a una persona para platicar sobre tus sentimientos, acciones y respuestas.',
-//                 no: 'Realiza respiraciones profundas por 10 segundos'
-//             },
-//             tristeza: {
-//                 si: 'Busca a alguien y platícale acerca de la situación que te hizo sentir triste y sobre tus ideas de cómo se podría contrarrestar ese sentimiento.',
-//                 no: 'Escucha el siguiente audio:'
-//             },
-//         }
-//     }
-// }
+export const actionDescripton = {
+    mandala: 'Colorea el siguiente mándala',
+    respirar: 'Realiza respiraciones profundas por 10 segundos',
+    seleccionar: 'Piensa en la situación que motivó tu emoción y del siguiente listado solo escoge 3 palabras para clasificarlo',
+    describir: 'Para cada palabra escribe una acción que te pueda ayudar a contrarrestar ese sentimiento.',
+    audio: 'Escucha el siguiente audio:',
+    almohada: 'Golpea la almohada virtualmente',
+    costal: 'Golpea el costal de boxeo'
+}
+
+export const allStepsActions = {
+    step1: {
+        emotions:
+        {
+            enojo: {
+                si: 'Realiza respiraciones profundas por 10 segundos',
+                no: 'Realiza respiraciones profundas por 10 segundos'
+            },
+            disgusto: {
+                si: 'Piensa en la situación que motivó tu disgusto y del siguiente listado solo escoge 3 palabras para clasificarlo',
+                no: 'Realiza respiraciones profundas por 10 segundos'
+            },
+            miedo: {
+                si: 'Piensa en la situación que motivó tu miedo y del siguiente listado solo escoge 3 palabras para clasificarlo',
+                no: 'Realiza respiraciones profundas por 10 segundos'
+            },
+            tristeza: {
+                si: 'Piensa en la situación que motivó tu tristeza y del siguiente listado solo escoge 3 palabras para clasificarlo',
+                no: 'Realiza respiraciones profundas por 10 segundos'
+            },
+        }
+    },
+    step2: {
+        emotions:
+        {
+            enojo: {
+                si: 'Escribe 3 puntos de cómo lo puedes controlar y reflexiona sobre cada punto, en una hoja de papel o dando clic en botón “Escribir”',
+                no: 'Golpea la almohada virtualmente'
+            },
+            disgusto: {
+                si: 'Para cada palabra escribe una acción que te pueda ayudar a contrarrestar ese sentimiento',
+                no: 'Golpea la almohada virtualmente'
+            },
+            miedo: {
+                si: 'Para cada palabra escribe una acción que te pueda ayudar a contrarrestar ese sentimiento',
+                no: 'Colorea el mandala'
+            },
+            tristeza: {
+                si: 'Para cada palabra escribe una acción que te pueda ayudar a contrarrestar ese sentimiento.',
+                no: 'Colorea el siguiente mándala'
+            },
+        }
+    },
+    step3: {
+        emotions:
+        {
+            enojo: {
+                si: 'Toma un poco de distancia (tiempo para reflexionar) antes de hablar con la persona que te hizo sentir enojado/a y después ya con calma platica con esta persona sobre los 3 puntos que escribiste (si así lo deseas).',
+                no: 'Escucha el siguiente audio:'
+            },
+            disgusto: {
+                si: 'Busca a alguien y platícale acerca de la situación que te hizo sentir disgustada/o y sobre tus ideas de cómo se podría contrarrestar ese sentimiento.',
+                no: 'Escucha el siguiente audio:'
+            },
+            miedo: {
+                si: 'Reflexiona sobre lo escrito anteriormente y hazte las siguientes preguntas. Además, busca a una persona para platicar sobre tus sentimientos, acciones y respuestas.',
+                no: 'Realiza respiraciones profundas por 10 segundos'
+            },
+            tristeza: {
+                si: 'Busca a alguien y platícale acerca de la situación que te hizo sentir triste y sobre tus ideas de cómo se podría contrarrestar ese sentimiento.',
+                no: 'Escucha el siguiente audio:'
+            },
+        }
+    }
+}

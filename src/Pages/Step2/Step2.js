@@ -1,16 +1,15 @@
-
-import './Step1.css';
-// import Frighten from '../../Assets/Frighten.svg'
+import './Step2.css';
 import { Header } from '../../Components/Header/Header';
 import { useState, useEffect } from 'react';
 import { actions } from '../../Utils/emotionsInfo';
 import { emotionsInfo } from '../../Utils/emotionsInfo';
-import ind1 from '../../Assets/Step indicators/indStep1.png'
+import { allStepsActions } from '../../Utils/emotionsInfo';
+import ind2 from '../../Assets/Step indicators/indStep2.png'
 import { useNavigate } from "react-router-dom";
-import { DescribeWords } from '../../Components/DescribeWords/DescribeWords';
-// import { Timer } from './Timer.js'
+import MandalaColorApp from '../../Components/Mandala/MandalaColorApp';
+// import { DescribeWords } from '../../Components/DescribeWords/DescribeWords';
 
-const Step1 = () => {
+export const Step2 = () => {
     const [items, setItems] = useState([]);
     const [question, setQuestion] = useState('');
     const [emotion, setEmotion] = useState('')
@@ -32,35 +31,32 @@ const Step1 = () => {
         }
     }, []);
 
-    console.log(items, question, emotion);
-
     const { name, origin } = items;
 
     const handleOnClick = () => {
-        navigate('/not-step2')
+        navigate('/step3')
     }
+    // console.log(items, emotion, question)
+    // console.log(allStepsActions.step2.emotions.emotion.question)
 
     return (
-        <div id='step1'>
+        <div id='step2'>
             <Header />
-            <section id='step1-container'>
-                <div id='title-step1'>
-                    <img alt='icon-emotion' src={emotionsInfo.img[emotion]} id='step1-emotion'></img>
-                    <img alt='icon-source' src={emotionsInfo.img[origin]} id='step1-origin'></img>
+            <section id='step2-container'>
+                <div id='title-step2'>
+                    <img alt='icon-emotion' src={emotionsInfo.img[emotion]} id='step2-emotion'></img>
+                    <img alt='icon-source' src={emotionsInfo.img[origin]} id='step2-origin'></img>
                     <h1>{name}</h1>
                 </div>
                 <div id='indicator'>
-                    <img src={ind1} className="stepIndicator" alt='indicator'></img>
+                    <img src={ind2} className="stepIndicator" alt='indicator'></img>
                 </div>
-                <div id='info-step1'>
-                    <p>{actions.step1[question]}</p>
-                    {/* <Timer /> */}
-                    <DescribeWords />
+                <div id='info-step2'>
+                    <p>{actions.step2[question]}</p>
+                    <MandalaColorApp />
                     <button className='mainButton' onClick={handleOnClick}>Continuar</button>
                 </div>
             </section>
         </div>
     )
 }
-
-export default Step1;
