@@ -1,3 +1,4 @@
+
 import './Step1.css';
 // import Frighten from '../../Assets/Frighten.svg'
 import { Header } from '../../Components/Header/Header';
@@ -9,7 +10,7 @@ import { useNavigate } from "react-router-dom";
 import { DescribeWords } from '../../Components/DescribeWords/DescribeWords';
 // import { Timer } from './Timer.js'
 
-export const Step1 = () => {
+const Step1 = () => {
     const [items, setItems] = useState([]);
     const [question, setQuestion] = useState('');
     const [emotion, setEmotion] = useState('')
@@ -62,5 +63,4 @@ export const Step1 = () => {
     )
 }
 
-
-
+export default Step1;
