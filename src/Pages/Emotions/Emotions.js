@@ -1,7 +1,6 @@
 import './Emotions.css';
 import { useState, useEffect } from 'react';
 import { emotionsInfo } from '../../Utils/emotionsInfo';
-import { Header } from '../../Components/Header/Header'
 import { useNavigate } from "react-router-dom";
 
 export const Emotions = () => {
@@ -27,6 +26,13 @@ export const Emotions = () => {
     const handleOnClick = (event) => {
         let finalEmotion = event.target.dataset.index;
         setEmotion(finalEmotion)
+        let allEmotions = document.querySelectorAll('.emotions-color');
+        allEmotions.forEach((emotion) => {
+            emotion.style.backgroundColor = '#EDEDED';
+        })
+        let selectedEmotion = document.getElementById(finalEmotion);
+        selectedEmotion.style.backgroundColor = '#969696'
+
     }
 
     const handleNavigate = () => {
@@ -43,26 +49,25 @@ export const Emotions = () => {
 
     return (
         <div id='emotions-page'>
-            <Header />
             <section id='general-container'>
                 <section id='emotion-description'>
                     <p>¿Cómo te sientes <span id='username'>{name}</span>?</p>
                     <h5> Haz clic sobre alguno de los emoticones</h5>
                 </section>
                 <section id='all-emotions'>
-                    <div onClick={handleOnClick} data-index='disgusto'>
+                    <div onClick={handleOnClick} data-index='disgusto' id='disgusto' className='emotions-color'>
                         <img src={emotionsInfo.img.disgusto} data-index='disgusto' alt='emotion-icon'></img>
                         <p data-index='disgusto' className='emotion-name'>Disgustado/a</p>
                     </div>
-                    <div onClick={handleOnClick} data-index='miedo'>
+                    <div onClick={handleOnClick} data-index='miedo' id='miedo' className='emotions-color'>
                         <img src={emotionsInfo.img.miedo} alt='emotion-icon' data-index='miedo'></img>
                         <p data-index='miedo' className='emotion-name'>Con miedo</p>
                     </div>
-                    <div onClick={handleOnClick} data-index='enojo'>
+                    <div onClick={handleOnClick} data-index='enojo' id='enojo' className='emotions-color'>
                         <img src={emotionsInfo.img.enojo} alt='emotion-icon' data-index='enojo'></img>
                         <p data-index='enojo' className='emotion-name'>Enojado/a</p>
                     </div>
-                    <div onClick={handleOnClick} data-index='tristeza'>
+                    <div onClick={handleOnClick} data-index='tristeza' id='tristeza' className='emotions-color'>
                         <img src={emotionsInfo.img.tristeza} alt='emotion-icon' data-index='tristeza'></img>
                         <p data-index='tristeza' className='emotion-name'> Triste</p>
                     </div>

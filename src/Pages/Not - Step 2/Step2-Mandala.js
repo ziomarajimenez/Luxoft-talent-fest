@@ -1,4 +1,3 @@
-import { Header } from "../../Components/Header/Header"
 import Frighten from '../../Assets/Frighten.svg'
 import briefcase from '../../Assets/Briefcase.png'
 import indStep2 from '../../Assets/Step indicators/indStep2.png'
@@ -39,7 +38,6 @@ export const Step2Mandala = () => {
 
     return (
         <>
-            <Header />
             <section className='informationHeader'>
                 <div className="infoImagesCorner">
                     <img className="infoImage" src={Frighten} alt="Frighten" />

@@ -1,0 +1,20 @@
+.questionsContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.stepQuestion {
+    text-align: center;
+    margin:0;
+    padding:0;
+    font-size: 20px;
+}
+
+#phrase{
+    margin-top: 50px;
+    padding:0;
+    font-size: 30px;
+    font-weight: bolder;
+}

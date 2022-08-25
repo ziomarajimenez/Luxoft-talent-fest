@@ -1,6 +1,5 @@
 
 import { useState, useEffect } from 'react';
-import { Header } from '../../Components/Header/Header'
 import './Description.css'
 import { emotionsInfo } from '../../Utils/emotionsInfo';
 import { useNavigate } from "react-router-dom";
@@ -45,15 +44,17 @@ export const Description = () => {
     const { name, origin } = items;
 
     const handleOnNavigate = () => {
-        if (question !== '') {
-            navigate('/step1')
-        }
+        navigate('/Step1')
+        // if (question === 'si') {
+        //     navigate('/yes-step1')
+        // } else if (question === 'no') {
+        //     navigate('/Step1')
+        // }
     }
 
     console.log(question)
     return (
         <div className='description'>
-            <Header />
             <section id='description-content'>
                 <div>
                     <h1 className='title'> <b>{name} </b>

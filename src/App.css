@@ -29,7 +29,63 @@
   display: block;
 }
 
+.secondaryButton {
+  color: white;
+  font-size: 2vh;
+  background-color: #C9A2FF;
+  border: none;
+  border-radius: 7px;
+  height: 6vh;
+  width: 9vw;
+  margin: 4vh auto 4vh auto;
+  cursor: pointer;
+  display: block;
+}
+
 .mainButton:disabled {
   background-color: #BB8EEB;
   cursor: auto;
+}
+
+.step{
+  background-color: #EDEDED;;
+}
+
+.step-container{
+  margin: 0 18% 0 18%;
+}
+
+.title-step{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.step-title{
+  font-size: 40px;
+  color: #6024A0;
+  font-weight: bolder;
+}
+
+.action-description{
+  background-color: #C9A2FF;
+  font-size: 25px;
+  text-align: center;
+}
+
+.info-step{
+display: flex;
+flex-direction: column;
+justify-content: center;
+}
+
+.indicator {
+  display: flex;
+  justify-content: center;
+}
+
+.step-icon{
+  position: absolute;
+  left:5%;
+  top:15%;
 }

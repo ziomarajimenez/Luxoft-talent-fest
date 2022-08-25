@@ -1,4 +1,3 @@
-import { Header } from '../../Components/Header/Header'
 import './LandingPage.css'
 import { useState, useEffect } from 'react';
 import heart from '../../Assets/Heart.png'
@@ -57,15 +56,14 @@ export const LandingPage = () => {
 
     function SubmitButton() {
         if (values.name !== '' && values.gender !== '' && values.age !== '' && values.origin !== '') {
-            return <button type="button" onClick={handleOnClick} >Continuar</button>
+            return <button type="button" onClick={handleOnClick} className='mainButton'>Continuar</button>
         } else {
-            return <button type="button" disabled>Continuar</button>
+            return <button type="button" disabled className='mainButton'>Continuar</button>
         };
     };
 
     return (
         <div className="landing-page">
-            <Header />
             <p>Por favor escribe cómo te gusta ser llamado:</p>
             <input type="text" placeholder="Nombre o nickname" name="name" onChange={handleChange} maxLength={50} required></input>
             <p>Por favor, selecciona tu género:</p>

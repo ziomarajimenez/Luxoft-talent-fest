@@ -1,20 +1,18 @@
 
 import './Step1.css';
-// import Frighten from '../../Assets/Frighten.svg'
-import { Header } from '../../Components/Header/Header';
 import { useState, useEffect } from 'react';
 import { actions } from '../../Utils/emotionsInfo';
 import { emotionsInfo } from '../../Utils/emotionsInfo';
 import ind1 from '../../Assets/Step indicators/indStep1.png'
 import { useNavigate } from "react-router-dom";
-import { DescribeWords } from '../../Components/DescribeWords/DescribeWords';
-// import { Timer } from './Timer.js'
+import { Timer } from '../../Components/Timer/Timer'
+import SelectWords from '../../Components/SelectWords/SelectWords'
 
 const Step1 = () => {
     const [items, setItems] = useState([]);
     const [question, setQuestion] = useState('');
     const [emotion, setEmotion] = useState('')
-
+    const [disabledButton, setDisabledButton] = useState(true)
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -37,27 +35,30 @@ const Step1 = () => {
     const { name, origin } = items;
 
     const handleOnClick = () => {
-        navigate('/not-step2')
+        navigate('/step2')
     }
 
     return (
-        <div id='step1'>
-            <Header />
-            <section id='step1-container'>
-                <div id='title-step1'>
-                    <img alt='icon-emotion' src={emotionsInfo.img[emotion]} id='step1-emotion'></img>
-                    <img alt='icon-source' src={emotionsInfo.img[origin]} id='step1-origin'></img>
-                    <h1>{name}</h1>
+        <div id='step'>
+            <section className='step-container'>
+                <div className='title-step'>
+                    <div className='step-icon'>
+                        <img alt='icon-emotion' src={emotionsInfo.img[emotion]} id='step1-emotion'></img>
+                        <img alt='icon-source' src={emotionsInfo.img[origin]} id='step1-origin'></img>
+                    </div>
+                    <h1 className='step-title'>{name}</h1>
                 </div>
-                <div id='indicator'>
+                <div className='indicator'>
                     <img src={ind1} className="stepIndicator" alt='indicator'></img>
                 </div>
-                <div id='info-step1'>
-                    <p>{actions.step1[question]}</p>
-                    {/* <Timer /> */}
-                    <DescribeWords />
-                    <button className='mainButton' onClick={handleOnClick}>Continuar</button>
+                <div className='info-step'>
+                    <p className='action-description'>{actions.step1[question]}</p>
                 </div>
+                {/* <Timer /> */}
+                {/* <SelectWords /> */}
+                {question === 'no' ? <Timer setDisabledButton={setDisabledButton} /> : <SelectWords setDisabledButton={setDisabledButton} />}
+                <button className='mainButton' onClick={handleOnClick} disabled={disabledButton} >Continuar</button>
+
             </section>
         </div>
     )

@@ -1,4 +1,12 @@
-.section-audio {
+#step3-emotion{
+  width: 15%
+}
+
+#step3-origin{
+  width: 30%;
+}
+
+/* .section-audio {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -42,4 +50,4 @@
 #info {
   width: 35px;
   height: 35px;
-}
+} */

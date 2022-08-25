@@ -7,9 +7,16 @@
   display: flex;
   justify-content: center;
   align-self: center;
+  margin: 1% auto 1% auto;
 }
-.time-impress{
-    font-size: 50px;
-  
-    margin-top: 80px;
+
+.time-impress {
+  font-size: 50px;
+  margin-top: 80px;
+}
+
+.section-timer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
