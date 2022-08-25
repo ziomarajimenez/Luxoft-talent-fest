@@ -1,16 +1,20 @@
-import Frighten from '../../Assets/Frighten.svg'
-import briefcase from '../../Assets/Briefcase.png'
-import indStep2 from '../../Assets/Step indicators/indStep2.png'
-import MandalaColorApp from "../../Components/Mandala/MandalaColorApp"
+import './Step2.css';
+import { Header } from '../../Components/Header/Header';
 import { useState, useEffect } from 'react';
+import { actions } from '../../Utils/emotionsInfo';
+import { emotionsInfo } from '../../Utils/emotionsInfo';
+// import { allStepsActions } from '../../Utils/emotionsInfo';
+import ind2 from '../../Assets/Step indicators/indStep2.png'
 import { useNavigate } from "react-router-dom";
+import MandalaColorApp from '../../Components/Mandala/MandalaColorApp';
+import DescribeWords from '../../Components/DescribeWords/DescribeWords';
 
 const Step2 = () => {
-    const navigate = useNavigate();
-
     const [items, setItems] = useState([]);
     const [question, setQuestion] = useState('');
     const [emotion, setEmotion] = useState('')
+
+    const navigate = useNavigate();
 
     useEffect(() => {
         const items = JSON.parse(localStorage.getItem('values'));
@@ -27,42 +31,38 @@ const Step2 = () => {
         }
     }, []);
 
-    console.log(items, question, emotion);
+    const { name, origin } = items;
 
     const handleOnClick = () => {
         navigate('/step3')
     }
-
-    const { name } = items;
+    // console.log(items, emotion, question)
+    // console.log(allStepsActions.step2.emotions.emotion.question)
 
     return (
-        <>
-            <section className='informationHeader'>
-                <div className="infoImagesCorner">
-                    <img className="infoImage" src={Frighten} alt="Frighten" />
-                    <img className="infoImage" src={briefcase} alt="Briefcase" />
-                </div>
-                <div className="infoName">
+        <div id='step2'>
+            <Header />
+            <section id='step2-container'>
+                <div id='title-step2'>
+                    <img alt='icon-emotion' src={emotionsInfo.img[emotion]} id='step2-emotion'></img>
+                    <img alt='icon-source' src={emotionsInfo.img[origin]} id='step2-origin'></img>
                     <h1>{name}</h1>
                 </div>
-                <div className="fakeSpace"></div>
+                <div id='indicator'>
+                    <img src={ind2} className="stepIndicator" alt='indicator'></img>
+                </div>
+                <div id='info-step2'>
+                    <p>{actions.step2[question]}</p>
+                    {/* {question === 'si' ? <Questions /> : <AudioComponent />} */}
+                    {question === 'si' ? <DescribeWords /> : <MandalaColorApp />}
+                    <button className='mainButton' onClick={handleOnClick}>Continuar</button>
+                </div>
             </section>
-            <div className="indicator">
-                <img className="stepIndicator" src={indStep2} />
-            </div>
-            <div className="stepContainer">
-                <div className="infoBanner">
-                    <p className="infoParagraph">Colorea el mandala</p>
-                </div>
-                <div className="colorPage">
-                    <MandalaColorApp />
-                </div>
-                <div className="mainButtonContainer">
-                    <button className="mainButton" onClick={handleOnClick}>Continuar</button>
-                </div>
-            </div>
-        </>
+        </div>
     )
 }
 
 export default Step2;
+
+
+
