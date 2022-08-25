@@ -1,4 +1,5 @@
 
+import { motion } from "framer-motion";
 import { useState, useEffect } from 'react';
 import './Description.css'
 import { emotionsInfo } from '../../Utils/emotionsInfo';
@@ -71,7 +72,9 @@ export const Description = () => {
                     <input type="radio" value="no" name="origin" /> No
                 </div>
                 <br></br>
-                <button className='mainButton' onClick={handleOnNavigate}>Continuar</button>
+                <motion.button className='mainButton' whileHover={{ scale: 1.1 }}
+                    transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                    onClick={handleOnNavigate}>Continuar</motion.button>
             </section>
         </div>
     );

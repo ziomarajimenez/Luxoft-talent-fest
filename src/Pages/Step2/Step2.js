@@ -1,4 +1,5 @@
 import './Step2.css';
+import { motion } from "framer-motion";
 import { useState, useEffect } from 'react';
 import { actions } from '../../Utils/emotionsInfo';
 import { emotionsInfo } from '../../Utils/emotionsInfo';
@@ -51,7 +52,9 @@ export const Step2 = () => {
                 <div className='info-step'>
                     <p className='action-description'>{actions.step2[question]}</p>
                     {question === 'si' ? <DescribeWords /> : <MandalaColorApp />}
-                    <button className='mainButton' onClick={handleOnClick}>Continuar</button>
+                    <motion.button className='mainButton' whileHover={{ scale: 1.1 }}
+                        transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                        onClick={handleOnClick}>Continuar</motion.button>
                 </div>
             </section>
         </div>

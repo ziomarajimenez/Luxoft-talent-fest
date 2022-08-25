@@ -19,12 +19,10 @@ function Modal({ isOpen, handleClose }) {
           <div className="modal-content">
             <section className="modal-header">
               <p className="title-modal">Opciones del programa de asistencia</p>
-
               <button className="modal-btn" onClick={handleClose}>
-                Cerrar
+                X
               </button>
             </section>
-
             <p className="modal-p">
               Descarga nuestra app iConnect, da de alta tu cuenta con tu correo
               corporativo y has clic en la opción hablar con alguien.

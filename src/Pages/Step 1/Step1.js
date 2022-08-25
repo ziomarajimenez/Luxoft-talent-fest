@@ -1,5 +1,6 @@
 
 import './Step1.css';
+import { motion } from "framer-motion";
 import { useState, useEffect } from 'react';
 import { actions } from '../../Utils/emotionsInfo';
 import { emotionsInfo } from '../../Utils/emotionsInfo';
@@ -57,7 +58,9 @@ const Step1 = () => {
                 {/* <Timer /> */}
                 {/* <SelectWords /> */}
                 {question === 'no' ? <Timer setDisabledButton={setDisabledButton} /> : <SelectWords setDisabledButton={setDisabledButton} />}
-                <button className='mainButton' onClick={handleOnClick} disabled={disabledButton} >Continuar</button>
+                <motion.button className='mainButton' whileHover={{ scale: 1.1 }}
+                    transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                    onClick={handleOnClick} disabled={disabledButton} >Continuar</motion.button>
 
             </section>
         </div>

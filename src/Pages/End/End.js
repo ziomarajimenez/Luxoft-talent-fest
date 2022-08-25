@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import React from "react";
 import "./end.css";
 import tulip from "../../Assets/Tulip.png";
@@ -21,9 +22,9 @@ export const End = () => {
     navigate('/')
   }
 
-  const handleClose = () => {
-    window.top.close();
-  }
+  // const handleClose = () => {
+  //   window.top.close();
+  // }
 
   const { name } = items;
 
@@ -35,8 +36,10 @@ export const End = () => {
         mejor manera y continúes disfrutando de tu día.
       </p>
       <img id="tulip" src={tulip} alt="tulip" />
-      <button onClick={handleOnClick} className='mainButton'>Volver al inicio</button>
-      <button className='mainButton' onClick={handleClose}>Cerrar página</button>
+      <motion.button onClick={handleOnClick} whileHover={{ scale: 1.1 }}
+        transition={{ type: "spring", stiffness: 400, damping: 10 }}
+        className='mainButton'>Volver al inicio</motion.button>
+      {/* <button className='mainButton' onClick={handleClose}>Cerrar página</button> */}
     </div>
   );
 };

@@ -40,9 +40,9 @@ export const Timer = (props) => {
       <motion.div
         className="timer-circle"
         animate={{
-          scale: [1, 1.1, 1.1, 1],
+          scale: [1, 1.2, 1.2, 1, 1],
         }}
-        transition={{ repeat: Infinity, duration: 1 }}
+        transition={{ repeat: Infinity, duration: 4 }}
         onClick={handleClick}
       >
         {!click ? (

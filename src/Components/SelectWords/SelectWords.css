@@ -6,10 +6,15 @@
     margin: auto;
 }
 
+#select-words{
+    display: grid;
+    grid-template-columns: repeat(2);
+}
+
 .columnSpace {
     display: flex;
     justify-content: center;
-    background-color: white;
+    background-color: #EDEDED;
     height: 70vh;
     width: 16vw;
     margin-top: 2vh;

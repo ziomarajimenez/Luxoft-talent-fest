@@ -30,7 +30,7 @@ const AudioComponent = () => {
     return (
         <div id='audioComponent'>
             <audio className="audio" src={randomMusic} controls></audio>
-            <p id="random-phrases">"{randomPhrases}"</p>
+            <p id="random-phrases"><i>"{randomPhrases}"</i></p>
             <section className="section-talk">
                 <button className="btn-talk-to-someone" onClick={() => setIsOpen(true)}>
                     {" "}

@@ -1,4 +1,5 @@
 import './LandingPage.css'
+import { motion } from "framer-motion";
 import { useState, useEffect } from 'react';
 import heart from '../../Assets/Heart.png'
 import briefcase from '../../Assets/Briefcase.png'
@@ -56,7 +57,9 @@ export const LandingPage = () => {
 
     function SubmitButton() {
         if (values.name !== '' && values.gender !== '' && values.age !== '' && values.origin !== '') {
-            return <button type="button" onClick={handleOnClick} className='mainButton'>Continuar</button>
+            return <motion.button type="button" whileHover={{ scale: 1.1 }}
+                transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                onClick={handleOnClick} className='mainButton'>Continuar</motion.button>
         } else {
             return <button type="button" disabled className='mainButton'>Continuar</button>
         };

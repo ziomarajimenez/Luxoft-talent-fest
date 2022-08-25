@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import './Emotions.css';
 import { useState, useEffect } from 'react';
 import { emotionsInfo } from '../../Utils/emotionsInfo';
@@ -41,7 +42,9 @@ export const Emotions = () => {
 
     function SubmitButton() {
         if (emotion !== '') {
-            return <button type="button" className='mainButton' onClick={handleNavigate} >Continuar</button>
+            return <motion.button type="button" whileHover={{ scale: 1.1 }}
+                transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                className='mainButton' onClick={handleNavigate} >Continuar</motion.button>
         } else {
             return <button type="button" className='mainButton' disabled>Continuar</button>
         };
