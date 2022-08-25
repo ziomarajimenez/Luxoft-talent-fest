@@ -1,7 +1,9 @@
 
 import './Step1.css';
-// import Frighten from '../../Assets/Frighten.svg'
-import { Header } from '../../Components/Header/Header';
+import { motion } from "framer-motion";
+import Frighten from '../../Assets/Frighten.svg'
+import briefcase from '../../Assets/Briefcase.png'
+// import { Header } from '../../Components/Header/Header';
 import { useState, useEffect } from 'react';
 import { actions } from '../../Utils/emotionsInfo';
 import { emotionsInfo } from '../../Utils/emotionsInfo';
@@ -42,21 +44,29 @@ const Step1 = () => {
 
     return (
         <div id='step1'>
-            <Header />
-            <section id='step1-container'>
-                <div id='title-step1'>
-                    <img alt='icon-emotion' src={emotionsInfo.img[emotion]} id='step1-emotion'></img>
-                    <img alt='icon-source' src={emotionsInfo.img[origin]} id='step1-origin'></img>
+            {/* <Header /> */}
+              <div className='informationHeader'>
+                <div className="infoImagesCorner">
+                  <img className="infoFeelingBig" src={Frighten} alt="Frighten" />
+                  <img className="infoCaseSmall" src={briefcase} alt="Briefcase" />
+                </div>
+                <div className="infoName">
                     <h1>{name}</h1>
                 </div>
+                <div className="fakeSpace"></div>
+              </div>
                 <div id='indicator'>
                     <img src={ind1} className="stepIndicator" alt='indicator'></img>
                 </div>
+            <section id='step1-container'>
                 <div id='info-step1'>
                     <p>{actions.step1[question]}</p>
                     {/* <Timer /> */}
                     <DescribeWords />
-                    <button className='mainButton' onClick={handleOnClick}>Continuar</button>
+                    <motion.button className='mainButton' 
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.8, borderRadius: "100%" }}
+                    onClick={handleOnClick}>Continuar</motion.button>
                 </div>
             </section>
         </div>

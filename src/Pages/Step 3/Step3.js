@@ -9,6 +9,10 @@ import frightenmusic3 from "../../Assets/Frighten music/motivational-day-112790.
 import frightenmusic4 from "../../Assets/Frighten music/winning-elevation-111355.mp3";
 import info from "../../Assets/Info.png";
 import { emotionsInfo } from "../../Utils/emotionsInfo";
+import Frighten from '../../Assets/Frighten.svg'
+import briefcase from '../../Assets/Briefcase.png'
+import indStep3 from '../../Assets/Step indicators/indStep3.png'
+import { motion } from "framer-motion";
 
 const musicFrighten = [
   frightenmusic,
@@ -29,6 +33,20 @@ const Step3 = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
+    <>
+    <section className='informationHeader'>
+            <div className="infoImagesCorner">
+                <img className="infoFeeling" src={Frighten} alt="Frighten" />
+                <img className="infoCase" src={briefcase} alt="Briefcase" />
+            </div>
+            <div className="infoName">
+                <h1>Nombre</h1>
+            </div>
+            <div className="fakeSpace"></div>
+        </section>
+        <div className="indicator">
+            <img className="stepIndicator" src={indStep3} />
+        </div>
     <div className="section-audio">
       {/* <SecSteps /> */}
       <section id="audio-instructions">
@@ -46,8 +64,15 @@ const Step3 = () => {
         </button>
       </section>
       <Modal handleClose={() => setIsOpen(false)} isOpen={isOpen}></Modal>
-      {/* <button className="mainButton">Finalizar</button> */}
     </div>
+    <div className="mainButtonContainer">
+      <motion.button className="mainButton"
+      whileHover={{ scale: 1.1 }}
+      whileTap={{ scale: 0.8, borderRadius: "100%" }}
+      >Finalizar</motion.button>
+    </div>
+
+    </>
   );
 };
 

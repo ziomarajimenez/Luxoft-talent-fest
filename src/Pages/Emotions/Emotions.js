@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import { emotionsInfo } from '../../Utils/emotionsInfo';
 import { Header } from '../../Components/Header/Header'
 import { useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
 
 export const Emotions = () => {
     const [items, setItems] = useState([]);
@@ -35,7 +36,10 @@ export const Emotions = () => {
 
     function SubmitButton() {
         if (emotion !== '') {
-            return <button type="button" className='mainButton' onClick={handleNavigate} >Continuar</button>
+            return <motion.button type="button" className='mainButton' 
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.8, borderRadius: "100%" }}
+            onClick={handleNavigate} >Continuar</motion.button>
         } else {
             return <button type="button" className='mainButton' disabled>Continuar</button>
         };
@@ -43,7 +47,7 @@ export const Emotions = () => {
 
     return (
         <div id='emotions-page'>
-            <Header />
+            {/* <Header /> */}
             <section id='general-container'>
                 <section id='emotion-description'>
                     <p>¿Cómo te sientes <span id='username'>{name}</span>?</p>
