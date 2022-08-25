@@ -67,9 +67,9 @@ export const Description = () => {
                 <p>{emotionsInfo.description[userEmotion]}</p>
                 <p> <b>{emotionsInfo.question[userEmotion]}</b> </p>
                 <div name="origin" onChange={handleChange} id='description-origin'>
-                    <input type="radio" value="si" name="origin" /> Sí
+                    <input className="purpleRadio" type="radio" value="si" name="origin" /> Sí
                     <br></br>
-                    <input type="radio" value="no" name="origin" /> No
+                    <input className="purpleRadio" type="radio" value="no" name="origin" /> No
                 </div>
                 <br></br>
                 <motion.button className='mainButton' whileHover={{ scale: 1.1 }}

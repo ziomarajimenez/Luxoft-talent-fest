@@ -50,6 +50,8 @@
   }
 
   .section-talk {
+    display: flex;
+    flex-direction: row;
     margin: 2vh auto 1% auto;
   }
 
@@ -62,10 +64,12 @@
     cursor: pointer;
     overflow: hidden;
     font-size: 20px;
-    margin-top: 0.5vh;
+    margin: 0.5vh auto;
   }
-  #info {
+
+  .infoIcon {
     width: 35px;
     height: 35px;
+    margin-top: 0.2vh;
   }
   

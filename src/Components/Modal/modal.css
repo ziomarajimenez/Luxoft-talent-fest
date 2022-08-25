@@ -37,16 +37,18 @@ display: flex;
 justify-content: space-around;
 }
 .modal-btn {
-  color: white;
-  background-color: rgba(96, 36, 160, 1);
-   margin-top: -23px;
-   
-  margin-left: 120px; 
-  border-radius: 10px;
-  height: 35px;
-  width: 70px;
+  color: rgba(96, 36, 160, 1);
+  background-color: white;
+  border: none;
+  margin-top: -23px;
+  border-radius: 50%;
+  margin-left: 170px;
+  font-size: 25px;
+  height: 40px;
+  width: 40px;
   align-self: center;
-
+  font-weight: 750;
+  cursor: pointer;
 }
 .modal-user {
   display: flex;

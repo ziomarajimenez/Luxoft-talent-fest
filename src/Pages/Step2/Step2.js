@@ -65,14 +65,16 @@ const Step2 = () => {
                     <div className='actionContainer'>
                         {question === 'si' ? <DescribeWords /> : <MandalaColorApp />}
                     </div>
+                </div>
+                </section>
                     <div className='buttonContainer'>
                         <motion.button className='mainButton' 
                             whileHover={{ scale: 1.1 }}
                             whileTap={{ scale: 0.8, borderRadius: "100%" }}
                             onClick={handleOnClick}>Continuar</motion.button>
                     </div>
-                </div>
-            </section>
+                
+            
             </>
         
     )

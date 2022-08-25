@@ -84,10 +84,10 @@ export const LandingPage = () => {
             </div>
             <p>¿Cuál es el origen de tu emoción?</p>
             <div name="origin" onChange={handleChange} id='origin'>
-                <input type="radio" value="personal" name="origin" /> Personal
+                <input className="purpleRadio" type="radio" value="personal" name="origin" /> Personal
                 <img src={heart} alt='heart-icon' className='heart'></img>
                 <br></br>
-                <input type="radio" value="laboral" name="origin" /> Laboral
+                <input className="purpleRadio" type="radio" value="laboral" name="origin" /> Laboral
                 <img src={briefcase} alt='briefcase-icon' className='brief-case'></img>
             </div>
             <br></br>

@@ -57,7 +57,7 @@ const Step3 = () => {
         </div>
         <section className='step3-container'>
             <div className='info-step3'>
-                <div className="infoBanner">
+                <div className="infoBannerSpec">
                     <p className="infoParagraph">{actions.step3[question]} </p>
                 </div>
                 <div className='stepBuild'>
