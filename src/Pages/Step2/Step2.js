@@ -1,5 +1,4 @@
 import './Step2.css';
-import { Header } from '../../Components/Header/Header';
 import { useState, useEffect } from 'react';
 import { actions } from '../../Utils/emotionsInfo';
 import { emotionsInfo } from '../../Utils/emotionsInfo';
@@ -8,6 +7,10 @@ import ind2 from '../../Assets/Step indicators/indStep2.png'
 import { useNavigate } from "react-router-dom";
 import MandalaColorApp from '../../Components/Mandala/MandalaColorApp';
 import DescribeWords from '../../Components/DescribeWords/DescribeWords';
+import Frighten from '../../Assets/Frighten.svg'
+import briefcase from '../../Assets/Briefcase.png'
+import indStep2 from '../../Assets/Step indicators/indStep2.png'
+import { motion } from "framer-motion";
 
 const Step2 = () => {
     const [items, setItems] = useState([]);
@@ -40,25 +43,38 @@ const Step2 = () => {
     // console.log(allStepsActions.step2.emotions.emotion.question)
 
     return (
-        <div id='step2'>
-            <Header />
-            <section id='step2-container'>
-                <div id='title-step2'>
-                    <img alt='icon-emotion' src={emotionsInfo.img[emotion]} id='step2-emotion'></img>
-                    <img alt='icon-source' src={emotionsInfo.img[origin]} id='step2-origin'></img>
+            <>
+            <section className='informationHeader'>
+                <div className="infoImagesCorner">
+                    <img className="infoImage" src={Frighten} alt="Frighten" />
+                    <img className="infoImage" src={briefcase} alt="Briefcase" />
+                </div>
+                <div className="infoName">
                     <h1>{name}</h1>
                 </div>
-                <div id='indicator'>
-                    <img src={ind2} className="stepIndicator" alt='indicator'></img>
-                </div>
-                <div id='info-step2'>
-                    <p>{actions.step2[question]}</p>
-                    {/* {question === 'si' ? <Questions /> : <AudioComponent />} */}
-                    {question === 'si' ? <DescribeWords /> : <MandalaColorApp />}
-                    <button className='mainButton' onClick={handleOnClick}>Continuar</button>
+                <div className="fakeSpace"></div>
+            </section>
+            <div className="indicator">
+                <img className="stepIndicator" src={indStep2} />
+            </div>
+            <section id='step2-container'>
+                <div className='info-step2'>
+                    <div className="infoBanner">
+                        <p className="infoParagraph">{actions.step2[question]}</p>
+                    </div>
+                    <div className='actionContainer'>
+                        {question === 'si' ? <DescribeWords /> : <MandalaColorApp />}
+                    </div>
+                    <div className='buttonContainer'>
+                        <motion.button className='mainButton' 
+                            whileHover={{ scale: 1.1 }}
+                            whileTap={{ scale: 0.8, borderRadius: "100%" }}
+                            onClick={handleOnClick}>Continuar</motion.button>
+                    </div>
                 </div>
             </section>
-        </div>
+            </>
+        
     )
 }
 

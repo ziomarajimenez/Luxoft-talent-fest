@@ -18,6 +18,12 @@
     font-size: 20px;
 }
 
-#describe-word{
+.describeContainer {
+    margin: auto;
+    width: 50%;
+}
+
+.describe-word{
     font-size: 25px;
+    margin-left: 1vw;
 }

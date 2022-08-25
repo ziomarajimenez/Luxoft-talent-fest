@@ -1,9 +1,27 @@
-#step3-emotion{
+/* #step3-emotion{
   width: 15%
 }
 
 #step3-origin{
   width: 30%;
+} */
+
+.actionContainer {
+  width: 70%;
+  margin: auto;
+  font-size: 25px;
+}
+
+.info-step3 {
+  margin: auto;
+}
+
+.stepBuild {
+  margin: auto;
+}
+
+.audioContainer {
+  margin: 2vh auto;
 }
 
 /* .section-audio {

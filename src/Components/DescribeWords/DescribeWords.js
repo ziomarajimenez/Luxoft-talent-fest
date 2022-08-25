@@ -12,13 +12,13 @@ const DescribeWords = () => {
     }, []);
     const setOfWords = words.map((word) =>
         <div id='write'>
-            <p id='describe-word'>{word}:</p>
+            <p className='describe-word'>{word}:</p>
             <textarea></textarea>
         </div>
     );
     return (
         <div>
-            <section id='describe-container'>{setOfWords}</section>
+            <section className='describe-container'>{setOfWords}</section>
         </div>
     );
 }

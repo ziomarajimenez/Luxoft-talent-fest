@@ -1,3 +1,4 @@
+
 .indicator {
   display: flex;
   justify-content: center;
@@ -68,15 +69,17 @@
 }
 
 .action-description{
-  background-color: #C9A2FF;
   font-size: 25px;
   text-align: center;
 }
 
 .info-step{
-display: flex;
-flex-direction: column;
-justify-content: center;
+  background-color: #C9A2FF;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 7vh;
+  margin-bottom: 4vh;
 }
 
 .indicator {

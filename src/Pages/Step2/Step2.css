@@ -5,3 +5,17 @@
 #step2-origin{
     width: 30%;
 }
+
+.actionContainer {
+    width: 70%;
+    margin: auto;
+    font-size: 25px;
+}
+
+.info-step2 {
+    margin: auto;
+}
+
+.buttonContainer {
+    margin-bottom: 4vh;
+}
