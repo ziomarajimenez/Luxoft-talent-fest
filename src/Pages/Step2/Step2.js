@@ -1,19 +1,17 @@
-import './Step2.css';
-import { motion } from "framer-motion";
-import { useState, useEffect } from 'react';
-import { actions } from '../../Utils/emotionsInfo';
-import { emotionsInfo } from '../../Utils/emotionsInfo';
-import ind2 from '../../Assets/Step indicators/indStep2.png'
-import { useNavigate } from "react-router-dom";
-import DescribeWords from '../../Components/DescribeWords/DescribeWords';
+import Frighten from '../../Assets/Frighten.svg'
+import briefcase from '../../Assets/Briefcase.png'
+import indStep2 from '../../Assets/Step indicators/indStep2.png'
 import MandalaColorApp from "../../Components/Mandala/MandalaColorApp"
+import './Step2-Mandala.css';
+import { useState, useEffect } from 'react';
+import { useNavigate } from "react-router-dom";
 
-export const Step2 = () => {
+export const Step2Mandala = () => {
+    const navigate = useNavigate();
+
     const [items, setItems] = useState([]);
     const [question, setQuestion] = useState('');
     const [emotion, setEmotion] = useState('')
-
-    const navigate = useNavigate();
 
     useEffect(() => {
         const items = JSON.parse(localStorage.getItem('values'));
@@ -30,33 +28,40 @@ export const Step2 = () => {
         }
     }, []);
 
-    const { name, origin } = items;
+    console.log(items, question, emotion);
 
     const handleOnClick = () => {
         navigate('/step3')
     }
 
+    const { name } = items;
+
     return (
-        <div className='step'>
-            <section className='step-container'>
-                <div className='title-step'>
-                    <div className='step-icon'>
-                        <img alt='icon-emotion' src={emotionsInfo.img[emotion]} id='step2-emotion'></img>
-                        <img alt='icon-source' src={emotionsInfo.img[origin]} id='step2-origin'></img>
-                    </div>
+        <>
+            <section className='informationHeader'>
+                <div className="infoImagesCorner">
+                    <img className="infoImage" src={Frighten} alt="Frighten" />
+                    <img className="infoImage" src={briefcase} alt="Briefcase" />
+                </div>
+                <div className="infoName">
                     <h1>{name}</h1>
                 </div>
-                <div className='indicator'>
-                    <img src={ind2} className="stepIndicator" alt='indicator'></img>
-                </div>
-                <div className='info-step'>
-                    <p className='action-description'>{actions.step2[question]}</p>
-                    {question === 'si' ? <DescribeWords /> : <MandalaColorApp />}
-                    <motion.button className='mainButton' whileHover={{ scale: 1.1 }}
-                        transition={{ type: "spring", stiffness: 400, damping: 10 }}
-                        onClick={handleOnClick}>Continuar</motion.button>
-                </div>
+                <div className="fakeSpace"></div>
             </section>
-        </div>
+            <div className="indicator">
+                <img className="stepIndicator" src={indStep2} />
+            </div>
+            <div className="stepContainer">
+                <div className="infoBanner">
+                    <p className="infoParagraph">Colorea el mandala</p>
+                </div>
+                <div className="colorPage">
+                    <MandalaColorApp />
+                </div>
+                <div className="mainButtonContainer">
+                    <button className="mainButton" onClick={handleOnClick}>Continuar</button>
+                </div>
+            </div>
+        </>
     )
 }

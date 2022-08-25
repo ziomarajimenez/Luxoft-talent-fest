@@ -1,4 +1,3 @@
-
 import './Step1.css';
 import { motion } from "framer-motion";
 import { useState, useEffect } from 'react';

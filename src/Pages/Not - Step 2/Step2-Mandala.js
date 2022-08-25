@@ -1,3 +1,6 @@
+
+import { Header } from "../../Components/Header/Header"
+import { motion } from "framer-motion";
 import Frighten from '../../Assets/Frighten.svg'
 import briefcase from '../../Assets/Briefcase.png'
 import indStep2 from '../../Assets/Step indicators/indStep2.png'
@@ -38,6 +41,9 @@ export const Step2Mandala = () => {
 
     return (
         <>
+
+            {/* <Header /> */}
+
             <section className='informationHeader'>
                 <div className="infoImagesCorner">
                     <img className="infoImage" src={Frighten} alt="Frighten" />
@@ -59,7 +65,10 @@ export const Step2Mandala = () => {
                     <MandalaColorApp />
                 </div>
                 <div className="mainButtonContainer">
-                    <button className="mainButton" onClick={handleOnClick}>Continuar</button>
+                    <motion.button className="mainButton" 
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.8, borderRadius: "100%" }}
+                    onClick={handleOnClick}>Continuar</motion.button>
                 </div>
             </div>
         </>
