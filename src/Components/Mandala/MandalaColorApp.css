@@ -2,6 +2,8 @@
   
   .appContainer {
     display: flex;
+    max-width: 60%;
+    margin: 2vh auto;
     flex-direction: row;
     justify-content: flex-start;
     background-color: white;

@@ -22,7 +22,7 @@ export const emotionsInfo = {
     words:
     {
         disgusto: ['Repugnancia', 'Aversión', 'Desaprobando', 'Ofendido', 'Horrorizado', 'Incómodo', 'Náuseas', 'Perturbado'],
-        miedo: ['Preocupado', 'Dudoso', 'Nervioso', 'Ansioso', 'Aterrorizado', 'Pánico', 'Horrorizado', 'Desesperado', 'Confundido', 'Estresado'],
+        miedo: ['Preocupación', 'Duda', 'Nervios', 'Ansiedad', 'Pánico', 'Desesperación', 'Confusión', 'Estrés'],
         tristeza: ['Solitario', 'Desconsolado', 'Melancólico', 'Decepcionado', 'Desesperanzado', 'Afligido', 'Infeliz', 'Perdido', 'Preocupado', 'Resignado', 'Miserable']
     },
     question: {
@@ -51,7 +51,7 @@ export const emotionsInfo = {
 
 export const actions = {
     step1: {
-        si: 'Piensa en la situación que motivó tu emoción y del siguiente listado solo escoge 3 palabras para clasificarlo.',
+        si: 'Piensa en la situación que generó tu emoción. De la columna izquierda, elige tres palabras para clasificarla.',
         no: 'Realiza respiraciones profundas por 10 segundos',
     },
     step2: {
@@ -67,7 +67,7 @@ export const actions = {
 export const actionDescripton = {
     mandala: 'Colorea el siguiente mándala',
     respirar: 'Realiza respiraciones profundas por 10 segundos',
-    seleccionar: 'Piensa en la situación que motivó tu emoción y del siguiente listado solo escoge 3 palabras para clasificarlo',
+    seleccionar: 'Piensa en la situación que generó tu emoción. De la columna izquierda, elige tres palabras para clasificarla.',
     describir: 'Para cada palabra escribe una acción que te pueda ayudar a contrarrestar ese sentimiento.',
     audio: 'Escucha el siguiente audio:',
     almohada: 'Golpea la almohada virtualmente',
