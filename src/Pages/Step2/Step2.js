@@ -2,11 +2,10 @@ import Frighten from '../../Assets/Frighten.svg'
 import briefcase from '../../Assets/Briefcase.png'
 import indStep2 from '../../Assets/Step indicators/indStep2.png'
 import MandalaColorApp from "../../Components/Mandala/MandalaColorApp"
-import './Step2-Mandala.css';
 import { useState, useEffect } from 'react';
 import { useNavigate } from "react-router-dom";
 
-export const Step2Mandala = () => {
+const Step2 = () => {
     const navigate = useNavigate();
 
     const [items, setItems] = useState([]);
@@ -65,3 +64,5 @@ export const Step2Mandala = () => {
         </>
     )
 }
+
+export default Step2;

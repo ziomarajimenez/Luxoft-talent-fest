@@ -50,7 +50,7 @@ function SelectWords(props) {
         <>
             <div className="columnContainer">
                 <div className="columnSpace">
-                    <div className="columnInfo optionsColumn">
+                    <div className="columnInfo optionsColumn" id='select-words'>
                         {options.map((option) => (
                             <div id={option} className="option" onClick={() => handleClickOption(option)}>
                                 <p className="word">{option}</p>
