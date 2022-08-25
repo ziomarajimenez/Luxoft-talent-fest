@@ -11,7 +11,7 @@ import Step3 from "./Pages/Step 3/Step3";
 import { Step1Words } from './Pages/Work - Yes - Step1/Step1 - Words';
 import { Step2 } from './Pages/Step2/Step2';
 import { Step3SelfQuestions } from './Pages/Yes - Step 3/Step 3 - SelfQuestions'
-
+import { End } from './Pages/End/End'
 
 function App() {
   return (
@@ -27,6 +27,7 @@ function App() {
           <Route path="/step3" element={<Step3 />} />
           <Route path="/yes-step1" element={<Step1Words />} />
           <Route path='/yes-step3' element={<Step3SelfQuestions />} />
+          <Route path='/end' element={<End />} />
         </Routes>
       </BrowserRouter>
       {/* <LandingPage /> */}

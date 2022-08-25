@@ -1,22 +1,17 @@
-import './Step2.css';
-// import { Header } from '../../Components/Header/Header';
 import Frighten from '../../Assets/Frighten.svg'
 import briefcase from '../../Assets/Briefcase.png'
+import indStep2 from '../../Assets/Step indicators/indStep2.png'
+import MandalaColorApp from "../../Components/Mandala/MandalaColorApp"
+import './Step2-Mandala.css';
 import { useState, useEffect } from 'react';
-import { actions } from '../../Utils/emotionsInfo';
-import { emotionsInfo } from '../../Utils/emotionsInfo';
-import { allStepsActions } from '../../Utils/emotionsInfo';
-import ind2 from '../../Assets/Step indicators/indStep2.png'
 import { useNavigate } from "react-router-dom";
-import { DescribeWords } from '../../Components/DescribeWords/DescribeWords';
-import { motion } from "framer-motion";
 
-export const Step2 = () => {
+export const Step2Mandala = () => {
+    const navigate = useNavigate();
+
     const [items, setItems] = useState([]);
     const [question, setQuestion] = useState('');
     const [emotion, setEmotion] = useState('')
-
-    const navigate = useNavigate();
 
     useEffect(() => {
         const items = JSON.parse(localStorage.getItem('values'));
@@ -33,18 +28,17 @@ export const Step2 = () => {
         }
     }, []);
 
-    const { name, origin } = items;
+    console.log(items, question, emotion);
 
     const handleOnClick = () => {
-        navigate('/yes-step3')
+        navigate('/step3')
     }
-    // console.log(items, emotion, question)
-    // console.log(allStepsActions.step2.emotions.emotion.question)
+
+    const { name } = items;
 
     return (
-        <div id='step2'>
-            {/* <Header /> */}
-            <div className='informationHeader'>
+        <>
+            <section className='informationHeader'>
                 <div className="infoImagesCorner">
                     <img className="infoImage" src={Frighten} alt="Frighten" />
                     <img className="infoImage" src={briefcase} alt="Briefcase" />
@@ -53,20 +47,21 @@ export const Step2 = () => {
                     <h1>{name}</h1>
                 </div>
                 <div className="fakeSpace"></div>
-            </div>
-                <div id='indicator'>
-                    <img src={ind2} className="stepIndicator" alt='indicator'></img>
-                </div>
-            <section id='step2-container'>
-                <div id='info-step2'>
-                    {/* <p>{actions.step2[question]}</p> */}
-                    <DescribeWords />
-                    <motion.button className='mainButton' 
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.8, borderRadius: "100%" }}
-                    onClick={handleOnClick}>Continuar</motion.button>
-                </div>
             </section>
-        </div>
+            <div className="indicator">
+                <img className="stepIndicator" src={indStep2} />
+            </div>
+            <div className="stepContainer">
+                <div className="infoBanner">
+                    <p className="infoParagraph">Colorea el mandala</p>
+                </div>
+                <div className="colorPage">
+                    <MandalaColorApp />
+                </div>
+                <div className="mainButtonContainer">
+                    <button className="mainButton" onClick={handleOnClick}>Continuar</button>
+                </div>
+            </div>
+        </>
     )
 }

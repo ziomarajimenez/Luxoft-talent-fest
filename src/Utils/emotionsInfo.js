@@ -56,11 +56,11 @@ export const actions = {
     },
     step2: {
         si: 'Para cada palabra escribe una acción que te pueda ayudar a contrarrestar tu sentimiento',
-        no: '',
+        no: 'Colorea el mandala',
     },
     step3: {
-        si: 'Para cada palabra escribe una acción que te pueda ayudar a contrarrestar tu sentimiento',
-        laboral: 'Escucha el siguiente audio:',
+        si: 'Reflexiona sobre lo escrito anteriormente y hazte las siguientes preguntas. Además, encuentra un momento para buscar a tu Direct Manager, platicar sobre lo que sucedió y compartir tus sentimientos.',
+        no: 'Escucha el siguiente audio:',
     }
 }
 

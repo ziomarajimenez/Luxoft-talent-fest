@@ -1,20 +1,24 @@
 
-import React, {useState, useEffect} from "react"
+import React, { useState, useEffect } from "react"
 import { emotionsInfo } from "../../Utils/emotionsInfo"
-import '../SelectWords/SelectWords.css' 
+import '../SelectWords/SelectWords.css'
 
-const  SelectWords =(props)=>  {
-    const {setDisabledButton} = props
+function SelectWords(props) {
+    const { setDisabledButton } = props
     let { words } = emotionsInfo
     const [options, setOptions] = useState(words.miedo)
     const [selections, setSelections] = useState([])
 
     useEffect(() => {
-        if(selections.length > 3 || selections.length < 3 ) {
+        if (selections.length > 3 || selections.length < 3) {
             setDisabledButton(true)
-        }else {
+        } else {
             setDisabledButton(false)
         }
+    }, [selections]);
+
+    useEffect(() => {
+        localStorage.setItem('selections', JSON.stringify(selections));
     }, [selections]);
 
     useEffect(() => {
@@ -29,7 +33,8 @@ const  SelectWords =(props)=>  {
             setSelections(current => [...current, option])
             setOptions(current => current.filter(element => {
                 return element !== option
-        }))}
+            }))
+        }
 
     }
 
@@ -41,33 +46,31 @@ const  SelectWords =(props)=>  {
         }))
     }
 
-
-
     return (
         <>
-        <div className="columnContainer">
-            <div className="columnSpace">
-                <div className="columnInfo optionsColumn">
-                    {options.map( (option) =>  (
-                        <div id={option} className="option" onClick={()=> handleClickOption(option)}> 
-                            <p className="word">{option}</p>
-                        </div>
-                    ) )}
-                    
+            <div className="columnContainer">
+                <div className="columnSpace">
+                    <div className="columnInfo optionsColumn">
+                        {options.map((option) => (
+                            <div id={option} className="option" onClick={() => handleClickOption(option)}>
+                                <p className="word">{option}</p>
+                            </div>
+                        ))}
+
+                    </div>
+                </div>
+                <div className="columnSpace">
+                    <div className="columnInfo selectionColumn">
+                        {selections.length ? selections.map((selection) => (
+                            <div id={selection} className="selection" onClick={() => handleClickSelection(selection)}>
+                                <p className="word">{selection}</p>
+                            </div>
+                        ))
+                            : ''
+                        }
+                    </div>
                 </div>
             </div>
-            <div className="columnSpace">
-                <div className="columnInfo selectionColumn">
-                { selections.length ? selections.map( (selection) =>  (
-                        <div id={selection} className="selection" onClick={()=> handleClickSelection(selection)}> 
-                            <p className="word">{selection}</p>
-                        </div>
-                    ) )
-                : ''
-                }
-                </div>
-            </div>
-        </div>
         </>
     )
 }

@@ -1,3 +1,4 @@
+
 import { Header } from "../../Components/Header/Header"
 import { motion } from "framer-motion";
 import Frighten from '../../Assets/Frighten.svg'
@@ -40,7 +41,9 @@ export const Step2Mandala = () => {
 
     return (
         <>
+
             {/* <Header /> */}
+
             <section className='informationHeader'>
                 <div className="infoImagesCorner">
                     <img className="infoImage" src={Frighten} alt="Frighten" />

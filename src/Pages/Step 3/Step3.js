@@ -1,79 +1,66 @@
-import React from "react";
-import { useState } from "react";
-import { SecSteps } from "../../Components/Section steps/SecSteps";
-import Modal from "../../Components/Modal/Modal";
-import "./step3.css";
-import frightenmusic from "../../Assets/Frighten music/acoustic-motivation-11290.mp3";
-import frightenmusic2 from "../../Assets/Frighten music/inspirational-background-112290.mp3";
-import frightenmusic3 from "../../Assets/Frighten music/motivational-day-112790.mp3";
-import frightenmusic4 from "../../Assets/Frighten music/winning-elevation-111355.mp3";
-import info from "../../Assets/Info.png";
-import { emotionsInfo } from "../../Utils/emotionsInfo";
-import Frighten from '../../Assets/Frighten.svg'
-import briefcase from '../../Assets/Briefcase.png'
-import indStep3 from '../../Assets/Step indicators/indStep3.png'
 import { motion } from "framer-motion";
-
-const musicFrighten = [
-  frightenmusic,
-  frightenmusic2,
-  frightenmusic3,
-  frightenmusic4,
-];
-const randomMusic =
-  musicFrighten[Math.floor(Math.random() * musicFrighten.length)];
-
-const { messages } = emotionsInfo;
-
-const randomPhrases =
-  messages.miedo[Math.floor(Math.random() * messages.miedo.length)];
-console.log(messages);
+import { useState, useEffect } from "react";
+import "./step3.css";
+import { emotionsInfo, actions } from "../../Utils/emotionsInfo";
+import { useNavigate } from "react-router-dom";
+import ind3 from '../../Assets/Step indicators/indStep3.png'
+import AudioComponent from '../../Components/AudioComponent/AudioComponent'
+import Questions from '../../Components/Questions/Questions'
 
 const Step3 = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
+
+  const [items, setItems] = useState([]);
+  const [question, setQuestion] = useState('');
+  const [emotion, setEmotion] = useState('')
+
+  useEffect(() => {
+    const items = JSON.parse(localStorage.getItem('values'));
+    const question = JSON.parse(localStorage.getItem('question'));
+    const emotion = JSON.parse(localStorage.getItem('emotion'));
+    if (items) {
+      setItems(items);
+    }
+    if (question) {
+      setQuestion(question)
+    }
+    if (emotion) {
+      setEmotion(emotion)
+    }
+  }, []);
+
+  console.log(items, question, emotion);
+
+  const handleOnClick = () => {
+    navigate('/end')
+  }
+
+  const { name, origin } = items;
 
   return (
-    <>
-    <section className='informationHeader'>
-            <div className="infoImagesCorner">
-                <img className="infoFeeling" src={Frighten} alt="Frighten" />
-                <img className="infoCase" src={briefcase} alt="Briefcase" />
-            </div>
-            <div className="infoName">
-                <h1>Nombre</h1>
-            </div>
-            <div className="fakeSpace"></div>
-        </section>
-        <div className="indicator">
-            <img className="stepIndicator" src={indStep3} />
+    <div className='step'>
+      <section className='step-container'>
+        <div className='title-step'>
+          <div className='step-icon'>
+            <img alt='icon-emotion' src={emotionsInfo.img[emotion]} id='step3-emotion'></img>
+            <img alt='icon-source' src={emotionsInfo.img[origin]} id='step3-origin'></img>
+          </div>
+          <h1>{name}</h1>
         </div>
-    <div className="section-audio">
-      {/* <SecSteps /> */}
-      <section id="audio-instructions">
-        <p className="audio-p">Escucha el siguiente audio</p>
+        <div className='indicator'>
+          <img src={ind3} className="stepIndicator" alt='indicator'></img>
+        </div>
+        <div className='info-step'>
+          <p className='action-description'>{actions.step3[question]} </p>
+          {question === 'si' ? <Questions /> : <AudioComponent />}
+          <motion.button className='mainButton' whileHover={{ scale: 1.1 }}
+            transition={{ type: "spring", stiffness: 400, damping: 10 }}
+            onClick={handleOnClick}>Continuar</motion.button>
+        </div>
       </section>
-
-      <audio className="audio" src={randomMusic} controls></audio>
-
-      <p id="random-phrases">"{randomPhrases}"</p>
-      <section className="section-talk">
-        <button className="btn-talk-to-someone" onClick={() => setIsOpen(true)}>
-          {" "}
-          <img id="info" src={info} alt="info" />
-          Necesito hablar con alguien
-        </button>
-      </section>
-      <Modal handleClose={() => setIsOpen(false)} isOpen={isOpen}></Modal>
     </div>
-    <div className="mainButtonContainer">
-      <motion.button className="mainButton"
-      whileHover={{ scale: 1.1 }}
-      whileTap={{ scale: 0.8, borderRadius: "100%" }}
-      >Finalizar</motion.button>
-    </div>
-
-    </>
   );
 };
 
 export default Step3;
+

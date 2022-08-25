@@ -1,10 +1,9 @@
 
+import { motion } from "framer-motion";
 import { useState, useEffect } from 'react';
-import { Header } from '../../Components/Header/Header'
 import './Description.css'
 import { emotionsInfo } from '../../Utils/emotionsInfo';
 import { useNavigate } from "react-router-dom";
-import { motion } from "framer-motion";
 
 export const Description = () => {
     const [items, setItems] = useState([]);
@@ -46,15 +45,17 @@ export const Description = () => {
     const { name, origin } = items;
 
     const handleOnNavigate = () => {
-        if (question !== '') {
-            navigate('/step1')
-        }
+        navigate('/Step1')
+        // if (question === 'si') {
+        //     navigate('/yes-step1')
+        // } else if (question === 'no') {
+        //     navigate('/Step1')
+        // }
     }
 
     console.log(question)
     return (
         <div className='description'>
-            {/* <Header /> */}
             <section id='description-content'>
                 <div>
                     <h1 className='title'> <b>{name} </b>
@@ -71,10 +72,9 @@ export const Description = () => {
                     <input type="radio" value="no" name="origin" /> No
                 </div>
                 <br></br>
-                <motion.button className='mainButton' 
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.8, borderRadius: "100%" }}
-                onClick={handleOnNavigate}>Continuar</motion.button>
+                <motion.button className='mainButton' whileHover={{ scale: 1.1 }}
+                    transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                    onClick={handleOnNavigate}>Continuar</motion.button>
             </section>
         </div>
     );
