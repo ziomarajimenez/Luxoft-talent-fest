@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import heart from '../../Assets/Heart.png'
 import briefcase from '../../Assets/Briefcase.png'
 import { useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
 
 export const LandingPage = () => {
     const navigate = useNavigate();
@@ -57,15 +58,18 @@ export const LandingPage = () => {
 
     function SubmitButton() {
         if (values.name !== '' && values.gender !== '' && values.age !== '' && values.origin !== '') {
-            return <button type="button" onClick={handleOnClick} >Continuar</button>
+            return <motion.button type="button" className='mainButton'
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.8, borderRadius: "100%" }}
+            onClick={handleOnClick} >Continuar</motion.button>
         } else {
-            return <button type="button" disabled>Continuar</button>
+            return <button type="button" className='mainButton' disabled>Continuar</button>
         };
     };
 
     return (
         <div className="landing-page">
-            <Header />
+            {/* <Header /> */}
             <p>Por favor escribe cómo te gusta ser llamado:</p>
             <input type="text" placeholder="Nombre o nickname" name="name" onChange={handleChange} maxLength={50} required></input>
             <p>Por favor, selecciona tu género:</p>

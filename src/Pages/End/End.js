@@ -1,6 +1,7 @@
 import React from "react";
 import "./end.css";
 import tulip from "../../Assets/Tulip.png";
+import { motion } from "framer-motion";
 
 const End = () => {
   return (
@@ -11,8 +12,14 @@ const End = () => {
         mejor manera y continúes disfrutando de tu día.
       </p>
       <img id="tulip" src={tulip} alt="tulip" />
-      <button>Volver al inicio</button>
-      <button>Cerrar página</button>
+      <motion.button className="mainButton"
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.8, borderRadius: "100%" }}
+        >Volver al inicio</motion.button>
+      <motion.button className="mainButton"
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.8, borderRadius: "100%" }}
+        >Cerrar página</motion.button>
     </div>
   );
 };

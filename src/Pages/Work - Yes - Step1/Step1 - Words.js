@@ -1,19 +1,35 @@
-import React, { useState } from "react"
-import { Header } from "../../Components/Header/Header"
+import React, { useState, useEffect } from "react"
+import { useNavigate } from "react-router-dom";
+// import { Header } from "../../Components/Header/Header"
 import Frighten from '../../Assets/Frighten.svg'
 import briefcase from '../../Assets/Briefcase.png'
 import indStep1 from '../../Assets/Step indicators/indStep1.png'
 import SelectWords from "../../Components/SelectWords/SelectWords"
 import './Step1 - Words.css'
+import { motion } from "framer-motion";
 
 
 export const Step1Words = () => {
 
-    // State switch with boolean for conditioning button
-    // Function for validating true or false on SelectWords component
-    // Return result for enable button
-
     const [disabledButton, setDisabledButton] = useState(true)
+    const [items, setItems] = useState([]);
+    const [emotion, setEmotion] = useState('');
+
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        localStorage.setItem('emotion', JSON.stringify(emotion));
+    }, [emotion]);
+
+
+    useEffect(() => {
+        const items = JSON.parse(localStorage.getItem('values'));
+        if (items) {
+            setItems(items);
+        }
+    }, []);
+
+    const { name } = items;
 
 
     const continueButtonClick =()=> {
@@ -31,7 +47,7 @@ export const Step1Words = () => {
                 <img className="infoCaseSmall" src={briefcase} alt="Briefcase" />
             </div>
             <div className="infoName">
-                <h1>Nombre</h1>
+                <h1>{name}</h1>
             </div>
             <div className="fakeSpace"></div>
         </section>
@@ -50,7 +66,10 @@ export const Step1Words = () => {
             </div>
         </div>
         <div className="mainButtonContainer">
-            <button disabled={disabledButton} className="mainButton" onClick={continueButtonClick} >Continuar</button>
+            <motion.button disabled={disabledButton} className="mainButton" 
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.8, borderRadius: "100%" }}
+            onClick={continueButtonClick} >Continuar</motion.button>
         </div>
         </>
     )

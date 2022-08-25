@@ -6,9 +6,11 @@
 }
 
 #title-step1{
-    display: flex;
+    /* display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center; */
+    margin-top: 1vh;
+    margin-left: 1vw;
 }
 
 #title-step1 img{
