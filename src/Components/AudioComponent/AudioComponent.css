@@ -1,15 +1,27 @@
 
-#audioComponent{
-display: flex;
-flex-direction: column;
+
+.allContainer {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 100%;
 }
+
+#audioComponent{
+  display: flex;
+  flex-direction: column;
+  margin-top: 4vh;
+  margin-bottom: 2vh;
+}
+
 .section-audio {
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-content: center;
   }
-  #audio-instructions {
+
+  /* #audio-instructions {
     background-color: #c9a2ff;
     margin: 2% auto 1% auto;
     padding: 0 10px;
@@ -17,7 +29,8 @@ flex-direction: column;
     max-width: 50%;
     width: 37%;
     font-weight: 300;
-  }
+  } */
+
   .audio-p {
     font-size: 30px;
   }
@@ -31,9 +44,17 @@ flex-direction: column;
     font-weight: bold;
     margin: 2% auto 1% auto;
   }
-  .section-talk {
-    margin: 3% auto 1% auto;
+
+  .phrasesContainer {
+    margin: 2vh auto;
   }
+
+  .section-talk {
+    display: flex;
+    flex-direction: row;
+    margin: 2vh auto 1% auto;
+  }
+
   .btn-talk-to-someone {
     border: none;
     background-color: transparent;
@@ -43,9 +64,12 @@ flex-direction: column;
     cursor: pointer;
     overflow: hidden;
     font-size: 20px;
+    margin: 0.5vh auto;
   }
-  #info {
+
+  .infoIcon {
     width: 35px;
     height: 35px;
+    margin-top: 0.2vh;
   }
   

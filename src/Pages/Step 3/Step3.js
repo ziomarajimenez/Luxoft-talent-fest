@@ -6,6 +6,8 @@ import { useNavigate } from "react-router-dom";
 import ind3 from '../../Assets/Step indicators/indStep3.png'
 import AudioComponent from '../../Components/AudioComponent/AudioComponent'
 import Questions from '../../Components/Questions/Questions'
+import Frighten from '../../Assets/Frighten.svg'
+import briefcase from '../../Assets/Briefcase.png'
 
 const Step3 = () => {
   const navigate = useNavigate();
@@ -38,27 +40,37 @@ const Step3 = () => {
   const { name, origin } = items;
 
   return (
-    <div className='step'>
-      <section className='step-container'>
-        <div className='title-step'>
-          <div className='step-icon'>
-            <img alt='icon-emotion' src={emotionsInfo.img[emotion]} id='step3-emotion'></img>
-            <img alt='icon-source' src={emotionsInfo.img[origin]} id='step3-origin'></img>
-          </div>
-          <h1>{name}</h1>
-        </div>
+    
+        <>
+        <section className='informationHeader'>
+            <div className="infoImagesCorner">
+                <img className="infoFeeling" src={Frighten} alt="Frighten" />
+                <img className="infoCase" src={briefcase} alt="Briefcase" />
+            </div>
+            <div className="infoName">
+                <h1>{name}</h1>
+            </div>
+            <div className="fakeSpace"></div>
+        </section>
         <div className='indicator'>
-          <img src={ind3} className="stepIndicator" alt='indicator'></img>
+            <img src={ind3} className="stepIndicator" alt='indicator'></img>
         </div>
-        <div className='info-step'>
-          <p className='action-description'>{actions.step3[question]} </p>
-          {question === 'si' ? <Questions /> : <AudioComponent />}
-          <motion.button className='mainButton' whileHover={{ scale: 1.1 }}
-            transition={{ type: "spring", stiffness: 400, damping: 10 }}
-            onClick={handleOnClick}>Continuar</motion.button>
-        </div>
-      </section>
-    </div>
+        <section className='step3-container'>
+            <div className='info-step3'>
+                <div className="infoBannerSpec">
+                    <p className="infoParagraph">{actions.step3[question]} </p>
+                </div>
+                <div className='stepBuild'>
+                    <div className="audioContainer">
+                    {question === 'si' ? <Questions /> : <AudioComponent />}
+                </div>
+                <motion.button className='mainButton' whileHover={{ scale: 1.1 }}
+                    transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                    onClick={handleOnClick}>Finalizar</motion.button>
+                </div>
+            </div>
+        </section>
+        </>
   );
 };
 

@@ -1,6 +1,7 @@
 
 import React, { useState, useEffect } from "react"
 import { emotionsInfo } from "../../Utils/emotionsInfo"
+import RightArrow from "../../Assets/RightArrow.png"
 import '../SelectWords/SelectWords.css'
 
 function SelectWords(props) {
@@ -50,7 +51,7 @@ function SelectWords(props) {
         <>
             <div className="columnContainer">
                 <div className="columnSpace">
-                    <div className="columnInfo optionsColumn" id='select-words'>
+                    <div className="columnInfo optionsColumn">
                         {options.map((option) => (
                             <div id={option} className="option" onClick={() => handleClickOption(option)}>
                                 <p className="word">{option}</p>
@@ -58,6 +59,9 @@ function SelectWords(props) {
                         ))}
 
                     </div>
+                </div>
+                <div className="arrowContainer">
+                    <img className="arrow" src={RightArrow} alt="arrow"></img>
                 </div>
                 <div className="columnSpace">
                     <div className="columnInfo selectionColumn">

@@ -10,20 +10,24 @@ const Questions = () => {
 
     const [isOpen, setIsOpen] = useState(false);
     return (
-        <div className="questionsContainer">
-            <p className="stepQuestion">¿Esta situación puede realmente hacerme daño?</p>
-            <p className="stepQuestion">¿Qué es lo peor que podría pasar?</p>
-            <p className="stepQuestion">¿Qué haría en ese escenario?</p>
+            <>
+            <div className="allContainer">
+            <div className="questionsContainer">
+                <p className="stepQuestion">¿Esta situación puede realmente hacerme daño?</p>
+                <p className="stepQuestion">¿Qué es lo peor que podría pasar?</p>
+                <p className="stepQuestion">¿Qué haría en ese escenario?</p>
+            </div>
             <p className="stepQuestion" id='phrase'> <i>"{randomPhrases}"</i></p>
             <section className="section-talk">
+                <img className="infoIcon" src={info} alt="info" />
                 <button className="btn-talk-to-someone" onClick={() => setIsOpen(true)}>
                     {" "}
-                    <img id="info" src={info} alt="info" />
                     Necesito hablar con alguien
                 </button>
             </section>
             <Modal handleClose={() => setIsOpen(false)} isOpen={isOpen}></Modal>
-        </div>
+            </div>
+            </>
     )
 }
 

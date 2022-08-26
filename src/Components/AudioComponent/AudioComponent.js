@@ -28,18 +28,22 @@ console.log(messages);
 const AudioComponent = () => {
     const [isOpen, setIsOpen] = useState(false);
     return (
-        <div id='audioComponent'>
-            <audio className="audio" src={randomMusic} controls></audio>
+        <div className="allContainer">
+            <div id='audioComponent'>
+                <audio className="audio" src={randomMusic} controls></audio>
+            </div>
+            <div className="phrasesContainer">
             <p id="random-phrases"><i>"{randomPhrases}"</i></p>
+            </div>
             <section className="section-talk">
+                <img className="infoIcon" src={info} alt="info" />
                 <button className="btn-talk-to-someone" onClick={() => setIsOpen(true)}>
                     {" "}
-                    <img id="info" src={info} alt="info" />
                     Necesito hablar con alguien
                 </button>
             </section>
             <Modal handleClose={() => setIsOpen(false)} isOpen={isOpen}></Modal>
-            {/* <button className="mainButton" onClick={handleOnClick}>Finalizar</button> */}
+        
         </div>
     )
 }

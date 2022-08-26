@@ -25,11 +25,11 @@ function Modal({ isOpen, handleClose }) {
             </section>
             <p className="modal-p">
               Descarga nuestra app iConnect, da de alta tu cuenta con tu correo
-              corporativo y has clic en la opción hablar con alguien.
+              corporativo y haz clic en la opción "Hablar con alguien".
             </p>
             <p className="modal-p">
-              Marca a los números 800 3465 5532, solo menciona que laboras para
-              Luxoft y un psicólogo te dará la atención que necesitas.
+              Llama al número 800 3465 5532, solo menciona que laboras para
+              Luxoft y un profesional te dará la atención psicológica que necesitas.
             </p>
           </div>
         </div>
